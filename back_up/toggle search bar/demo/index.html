@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>Hidden Dropdown Search Field - SpyreStudios Demo</title>
+  <meta name="author" content="Jake Rocheleau">
+  <link rel="shortcut icon" href="http://spyrestudios.com/favicon.ico">
+  <link rel="icon" href="http://spyrestudios.com/favicon.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="w">
+    <header id="topbar" class="clearfix">
+      <div id="logo">SiteName</div>
+      
+      <nav id="topnav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Somepage</a></li>
+          <li><a href="#">Nothing</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#" id="searchtoggl"><i class="fa fa-search fa-lg"></i></a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <div id="searchbar" class="clearfix">
+      <form id="searchform" method="get" action="searchpage.php">
+        <button type="submit" id="searchsubmit" class="fa fa-search fa-4x"></button>
+        <input type="search" name="s" id="s" placeholder="Keywords..." autocomplete="off">
+        
+      </form>
+    </div>
+    
+    <section id="fullimg"></section>
+    
+    <div id="content">
+      <p><a href="http://www.flickr.com/photos/jdlouhy/2946261990/" target="_blank">original image source</a></p>
+      
+      <h1>Page Heading</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquet a odio vitae faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce in nulla mauris. Sed convallis, nunc vel consequat gravida, ipsum erat dignissim erat, non luctus velit sem et est. Maecenas dignissim interdum est, at tempor nibh tincidunt eu.</p>
+      
+      <p>Nam tincidunt nunc accumsan metus suscipit luctus. Phasellus aliquet ante vitae mi commodo, et dignissim mi viverra. Etiam vel viverra nisl, non commodo felis. Sed mollis ullamcorper neque.</p>
+
+      <p>Nullam sit amet massa eu dui euismod lobortis quis porta sapien. Donec ac est at neque pretium tincidunt et convallis sapien. In semper sem posuere est mollis facilisis. Vestibulum molestie erat ut tellus lobortis lacinia. Donec velit est, fringilla et feugiat id, dapibus vitae purus. In aliquam, justo vitae congue lacinia, eros tortor bibendum ipsum, eget rhoncus dui magna vel lectus. Suspendisse tristique pulvinar odio, ac porta odio egestas eu. Integer varius magna lectus, sit amet tincidunt libero placerat nec. Nulla non tortor ac turpis blandit laoreet.</p>
+    </div>
+  </div>
+<script type="text/javascript">
+$(function(){
+  var $searchlink = $('#searchtoggl i');
+  var $searchbar  = $('#searchbar');
+  
+  $('#topnav ul li a').on('click', function(e){
+    e.preventDefault();
+    
+    if($(this).attr('id') == 'searchtoggl') {
+      if(!$searchbar.is(":visible")) { 
+        // if invisible we switch the icon to appear collapsable
+        $searchlink.removeClass('fa-search').addClass('fa-search-minus');
+      } else {
+        // if visible we switch the icon to appear as a toggle
+        $searchlink.removeClass('fa-search-minus').addClass('fa-search');
+      }
+      
+      $searchbar.slideToggle(300, function(){
+        // callback after search bar animation
+      });
+    }
+  });
+  
+  $('#searchform').submit(function(e){
+    alert(document.getElementById("s").value );
+	e.preventDefault(); // stop form submission
+  });
+});
+</script>
+</body>
+</html>

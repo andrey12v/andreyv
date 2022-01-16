@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" height="100%">
+<head>
+  <title>Andrey Vasilyev</title>
+  <meta name="robots" content="noindex,nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="images/icon-logo.png">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+  <link href="css/main_style.css" rel="stylesheet">
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/jquery.shuffle.min.js"></script>
+  
+<script>
+$(window).ready(function(){
+	$("#searchMenu").text($(window).width());
+	/*if($(window).width()<750)
+	{
+		$("#searchMenu").text(" Search"); 
+		$("#searchMenu").css({"font-size": "19px"});
+		
+	}
+	else
+	{
+		$("#searchMenu").text(""); 
+		$("#searchMenu").css({"font-size": "0px"});
+	}*/
+
+});
+
+$(window).resize(function(){
+	$("#searchMenu").text($(window).width());
+	/*if($(window).width()<750)
+	{
+		$("#searchMenu").text(" Search"); 
+		$("#searchMenu").css({"font-size": "19px"});
+	}
+	else
+	{
+		$("#searchMenu").text(""); 
+		$("#searchMenu").css({"font-size": "0px"});
+	}*/
+});
+
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 50) {
+    $('nav').addClass('shrink');
+  } else {
+    $('nav').removeClass('shrink');
+  }
+});
+
+</script>
+
+<style>
+html, body
+{
+	background-color: #e5e5e5;
+}
+
+.projectSection img
+{
+	margin: auto;
+	max-height: 350px;
+}
+
+</style>
+  
+</head>
+<body>
+<!-- ***************** Begin Navigation Bar ********************-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <img id="logo" src="images/big-logo.jpg">
+	</div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li class="active"><a href="projects.html"><span class="glyphicon glyphicon-cog"></span> My Projects</a></li>
+        <li><a href="blog.html"><span class="glyphicon glyphicon-comment"></span> Blog</a></li>
+		<li><a href="index.html#contact"><span class="glyphicon glyphicon-send"></span> Contact</a></li>
+		<!--<li><a href="search.php"><span class="glyphicon glyphicon-search"><span id="searchMenu"></span></a></li>-->
+	  </ul>
+    </div><!--/.nav-collapse -->
+</div>
+</nav>
+<!-- ***************** End Navigation Bar ********************-->
+<br />
+
+<div id="solutionsHeader" class="header">
+<br />
+<br />
+<p class="header1">PROJECTS
+</p>
+</div>
+<br />
+<div class="container">
+ 
+	<div class="animated lightSpeedIn"> 
+	<div class="blogText">.
+		<img class="img-responsive" src="projects/ims1.jpg" style="float: left; max-height: 300px; margin-bottom: 5px; margin-right: 15px;">
+		<p style="font-family: ProfsetITFont; font-size: 30px; text-align: center;">Inventory Tracking System</p>
+		<p class="lead" style="font-size: 17px; ">
+		As I have already mentioned on my prior webpages I worked part-time for International Marketing System on their inventory tracking system. Here are some of the interactive applications that I implemented for their system:<br />   
+		<b>The Inventory Application “Diva Reports”</b>, provided the ability for company employees to pull inventory information from the database according to different options such as vendors, date ranges, statuses, product categories, the amount of sales etc. The Inventory Tracking application consists of multiple tabs. All the tabs are listed below with appropriate descriptions and screen shots (please click on the name of the tab to view its screen shot in a separate widow). All the code for the application can be viewed on <a href="https://github.com/andrey12v/githubprojects/tree/master/IMS/DivaReports/DivaReports" target="_blank">GITHUB</a> and the SQL Scripts for database tables can be retrieved from <a href="https://github.com/andrey12v/githubprojects/blob/master/IMS/DivaDB.sql" target="_blank">THIS LINK</a> on github, as well.<br/>
+		<ul style="font-size: 17px; text-align: justify; list-style-image: url('blog/checkmark3.jpg');">
+		<li><a href="projects/imsscreenshot1.jpg" target="blank">The tab “Sales of items”</a> provides information about all items available at the company warehouse. The inventory can be selected by Accounts (vendors) on the left side and product names on the right side of the form.  The date ranges and various check mark options allow to display information in a preferable format. The buttons “Get Items” - retrieves all items, “Get Item Sales” - displays the amount of sales for every single item and the button “Search” - allows to find any specific item within the generated results. The button “Export To CSV” - provide capability to export the results in the CSV format for further reviews.  All other tabs have similar functionality and they are self-explanatory from the provided screen shots.</li>
+		<li><a href="projects/imsscreenshot2.jpg" target="blank">The tab “Current Sold”</a> provides inventory information about the items currently sold.</li>
+		<li><a href="projects/imsscreenshot3.jpg" target="blank">The tab “Par Percentage”</a> shows percentage of sales based on the formula InStock Inventory / (New Par + Par Correction)</li>
+		<li><a href="projects/imsscreenshot4.jpg" target="blank">The tab “Out of Stock”</a> provides information about the items that are out of stock based on the prior tab and multiple criteria such as “New Par”; “Par Correction”; “Par Percentage”; “On Order”; “Discontinued”;</li>
+		<li><a href="projects/imsscreenshot5.jpg" target="blank">The tab “Bulk Export”</a> provides various information about products that are sold on export.</li>
+		<li><a href="projects/imsscreenshot6.jpg" target="blank">The tab “Sales of Sets”</a> contains information about products that can be sold only in sets. </li>
+		</ul>
+		</p>
+		<p class="lead" style="font-size: 17px; ">
+		<b><a href="projects/imsscreenshot7.jpg" target="blank">Inventory Scanning Application</a></b> verifies if an item exists in the company warehouse based on bar codes and items from Excel file. The functionality of the application can be described in the following steps:  1) when the Inventory Scanning Application is executed it connects to Excel file with the list of specific items that are available at the company warehouse; 2) A user scans an item and the bar code is displayed in a separate text field in the application; 3) The user clicks the button “search” and the application searches the items based on the bar code in excel sheet. If the item exists in the excel file then the item is added automatically to the list in the Inventory Scanning Application. If the item doesn’t exist in the list then the application makes the sound and displays the dialog box for the user to enter item number and quantity. 4) All information, collected in the list in the Inventory Tracking application, can be exported into separated CSV file for further review and processing. The excel file was used instead of MS SQL Server database for this particular application only. The source code of the application can be viewed on this link on <a href="https://github.com/andrey12v/githubprojects/tree/master/IMS/InventoryScan/Inventory%20Scan" target="_blank">GITHUB</a>. 
+ 		</p>
+		<img class="img-responsive center-block" src="projects/ims2.jpg" style="max-height: 300px;">.
+	</div>
+	</div>
+   </div>
+<br />
+<footer>
+<br />
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-md-6 col-sm-12">
+				<div class="copyright">
+					<p>
+						<br />
+						<span style="font-size: 17px;">&copy; <script>document.write(new Date().getFullYear());</script> Andrey Vasilyev</span>
+					</p>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-6 col-sm-12">
+				<div class="social-network">
+					<span>Follow me:&nbsp;</span>
+					<a href="#" class="iconMedia icon-cube facebook" target="blank"></a>
+					<a href="https://github.com/andrey12v/githubprojects" class="iconMedia icon-cube github" target="blank"></a>
+					<a href="https://www.linkedin.com/in/andrey-vasilyev-08316b62/" class="iconMedia icon-cube linkedin" target="blank"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+<br />
+</footer>
+ 
+<script>
+$(".box").hover(
+	function () {
+		$(this).find('h3').addClass("animated fadeInDown");
+		$(this).find('span').addClass("animated zoomIn");
+		$(this).find('p').addClass("animated fadeInUp");
+	},
+	function () {
+		$(this).find('h3').removeClass("animated fadeInDown");
+		$(this).find('span').removeClass("animated zoomIn");
+		$(this).find('p').removeClass("animated fadeInUp");
+	}
+);
+
+</script>
+
+<script src="js/ScrollToTop.js" type="text/javascript"></script>
+ 
+</body>
+</body>
+</html>

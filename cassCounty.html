@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>US Census App</title>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+	
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="FargoCensusBlocks.js"></script>
+	
+	<style>
+		body {
+			padding: 0px;
+			padding-right: 5px;
+			margin: 0;
+		}
+		html, body, #map {
+			height: 100%;
+		}
+
+		input
+		{
+			margin-top: 10px;
+			margin-left: 10px;
+		}
+		
+		.info {
+			padding: 6px 8px;
+			font: 14px/16px Arial, Helvetica, sans-serif;
+			background: white;
+			background: rgba(255,255,255,0.8);
+			box-shadow: 0 0 15px rgba(0,0,0,0.2);
+			border-radius: 5px;
+		}
+		.info h4 {
+			margin: 0 0 5px;
+			color: #777;
+		}
+
+		.legend {
+			text-align: left;
+			line-height: 18px;
+			color: #555;
+		}
+		.legend i {
+			width: 18px;
+			height: 18px;
+			float: left;
+			margin-right: 8px;
+			opacity: 0.7;
+		}
+	</style>
+</head>
+<body>
+	 <!--****************** Begin Modal Window For Weight Management ******************-->
+	<div id="modal-infomessage" class="modal fade">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title" style="text-align:center; color:#3b90af; font-weight:900;">Census Application</h4>
+				</div>
+				<div class="modal-body" style="font-size:16px; text-align:justify;">
+This application is built based on the data from <a href="http://www.census.gov" target="blank">WWW.CENSUS.GOV</a> website which provides any kind of statistics by any topic and any location. The data from census.gov website can be represented by states, cities, counties and even small census blocks. You can pull any statistic information from this link:<br /> 
+<a href="http://factfinder.census.gov/faces/nav/jsf/pages/guided_search.xhtml" target="blank">http://factfinder.census.gov/faces/nav/jsf/pages/guided_search.xhtml</a> <br/>
+The current application was built during Fargo Visualization Hackathon for demonstration purposes. The Census App visualizes population, labor force, employed and unemployed people in Cass County by Census Blocks for 2014 year. Since US Census Data is provided in CSV files only, this application was an excellent tool to demonstrate how the raw data can be visualized on the web map. This application can be improved and include the functionality to upload any kind of statistical data from US Census Website to this Web Map.  
+					<br>
+					</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--****************** End Modal Window For Weight Management ******************-->
+	
+	<div class="row">
+	<div class="col-md-3 col-xs-6">
+		<input type="file" id="fileUpload" /> 
+	</div>
+	<div class="col-md-3 col-xs-6">
+		<input type="button" id="upload" value="Upload" data-toggle="modal" data-target="#modal-infomessage" />
+	</div>
+	</div>
+	<p style="line-height: 6px;"></p>
+	
+	<div id="map"></div>
+
+	
+	
+	<script type="text/javascript">
+
+		var map = L.map('map').setView([46.89, -96.7894], 11);
+
+		var streets = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+			attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+			maxZoom: 18,
+			id: 'mapbox/streets-v11',
+			tileSize: 512,
+			zoomOffset: -1,
+			accessToken: 'pk.eyJ1IjoiYW5kcmV5MTJ2IiwiYSI6ImNreDhmemQ1czBscmcydm54d3pyYW0yZDUifQ.EKKL9aji66uNRu_71oK8cA'
+		}).addTo(map);
+
+		var grayscale = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiYW5kcmV5MTJ2IiwiYSI6ImNreDhmemQ1czBscmcydm54d3pyYW0yZDUifQ.EKKL9aji66uNRu_71oK8cA', {
+			maxZoom: 18,
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+				'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+			id: 'mapbox.light'
+		}).addTo(map);
+		
+		var baseLayers = {
+			"Grayscale": grayscale,
+			"Streets": streets
+		};
+		
+		L.control.layers(baseLayers, {}, {collapsed: false}).addTo(map);
+		
+		// control that shows state info on hover
+		var info = L.control();
+
+		info.onAdd = function (map) {
+			this._div = L.DomUtil.create('div', 'info');
+			this.update();
+			return this._div;
+		};
+
+		info.update = function (props) {
+			if(props)
+			{
+				this._div.innerHTML = '<b>Census Block:</b> ' + props.geoid + '<br /><b>Total Estimate:</b> ' + props.totalEstimate + '<br/>' +
+				'<b>Labor Force:</b>' + props.laborForce + '<br/>' + '<b>Employed:</b>' + props.employed + '<br/>' + '<b>Unemployed:</b>' + props.unemployed
+			}
+			else
+			{
+				this._div.innerHTML = 'Hover over a census block'
+			}
+		};
+		info.addTo(map);
+		
+		
+		function getColor(d) {
+			return d > 4000 ? '#BD0026' :
+				   d > 3000 ? '#E31A1C' :  
+			       d > 2000 ? '#FC4E2A' :
+			       d > 1000 ? '#FD8D3C' :
+			       d > 800  ? '#FEB24C' :
+			       d > 500  ? '#FED976' :
+			       d > 100  ? '#FFEDA0' :
+			                  '#fff4c4';
+		}
+				
+		function style(feature) {
+			var colorPick;
+			colorPick = getColor(feature.totalEstimate);
+			return {
+				weight: 2,
+				opacity: 2,
+				color: 'white',
+				dashArray: '3',
+				fillOpacity: 0.4,
+				fillColor: colorPick
+			};
+		}
+				
+		function highlightFeature(e) {
+			var layer = e.target;
+
+			layer.setStyle({
+				weight: 2,
+				color: '#666',
+				dashArray: '',
+				fillOpacity: 0.4
+			});
+
+			if (!L.Browser.ie && !L.Browser.opera) {
+				layer.bringToFront();
+			}
+
+			info.update(layer.feature);
+		}
+
+		var geojson;
+
+		function resetHighlight(e) {
+			geojson.resetStyle(e.target);
+			info.update();
+		}
+
+		function zoomToFeature(e) {
+			map.fitBounds(e.target.getBounds());
+		}
+
+		function onEachFeature(feature, layer) {
+			layer.on({
+				mouseover: highlightFeature,
+				mouseout: resetHighlight,
+				click: zoomToFeature
+			});
+		}
+
+		geojson = L.geoJson(fargoCensusBlocks, {
+			style: style,
+			onEachFeature: onEachFeature
+		}).addTo(map);
+
+		map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau 2014</a>');
+
+
+		var legend = L.control({position: 'topright'});
+
+		legend.onAdd = function (map) {
+
+			var div = L.DomUtil.create('div', 'info legend'),
+				grades = [100, 500, 800, 1000, 2000, 3000, 4000],
+				labels = [],
+				from, to;
+
+			for (var i = 0; i < grades.length; i++) {
+				from = grades[i];
+				to = grades[i + 1];
+
+				labels.push(
+					'<i style="background:' + getColor(from + 1) + '"></i> ' +
+					from + (to ? '&ndash;' + to : '+'));
+			}
+
+			div.innerHTML = 'Total Population: <br />' + labels.join('<br>');
+			return div;
+		};
+
+		legend.addTo(map);
+	
+		
+	</script>
+
+
+</body></html>

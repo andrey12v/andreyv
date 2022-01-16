@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" height="100%">
+<head>
+  <title>Andrey Vasilyev</title>
+  <meta name="robots" content="noindex,nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="images/icon-logo.png">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+  <link href="css/main_style.css" rel="stylesheet">
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  
+<script>
+$(window).ready(function(){
+	$("#searchMenu").text($(window).width());
+	/*if($(window).width()<750)
+	{
+		$("#searchMenu").text(" Search"); 
+		$("#searchMenu").css({"font-size": "19px"});
+		
+	}
+	else
+	{
+		$("#searchMenu").text(""); 
+		$("#searchMenu").css({"font-size": "0px"});
+	}*/
+
+});
+
+$(window).resize(function(){
+	$("#searchMenu").text($(window).width());
+	/*if($(window).width()<750)
+	{
+		$("#searchMenu").text(" Search"); 
+		$("#searchMenu").css({"font-size": "19px"});
+	}
+	else
+	{
+		$("#searchMenu").text(""); 
+		$("#searchMenu").css({"font-size": "0px"});
+	}*/
+});
+
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 50) {
+    $('nav').addClass('shrink');
+  } else {
+    $('nav').removeClass('shrink');
+ }
+});
+
+</script>
+
+<style>
+html, body
+{
+	background-color: #e5e5e5;
+}
+
+</style>
+  
+</head>
+<body>
+<!-- ***************** Begin Navigation Bar ********************-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <img id="logo" src="images/big-logo.jpg">
+	</div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+       	<li><a href="projects.html"><span class="glyphicon glyphicon-cog"></span> My Projects</a></li>
+        <li class="active"><a href="blog.html"><span class="glyphicon glyphicon-comment"></span> Blog</a></li>
+		<li><a href="index.html#contact"><span class="glyphicon glyphicon-send"></span> Contact</a></li>
+		<!--<li><a href="search.php"><span class="glyphicon glyphicon-search"><span id="searchMenu"></span></a></li>-->
+	    		
+	  </ul>
+    </div><!--/.nav-collapse -->
+</div>
+</nav>
+<!-- ***************** End Navigation Bar ********************-->
+<br />
+
+<div id="blogHeader" class="header">
+<br />
+<br />
+<p class="header1">BLOG
+</p>
+</div>
+<br />
+<br />
+<div class="container">
+  	
+	<div class="animated lightSpeedIn"> 
+	<div class="blogText">
+		<img class="img-responsive" src="blog/components.jpg" style="float: left;">
+		
+		<p style="font-family: ProfsetITFont; font-size: 30px; text-align: center;">Differences between software components and services. The important consequences of these differences</p>
+		<p class="lead" style="font-size: 17px; ">
+		The difference between software components and services can be defined based on the criteria:<br />
+		<b>By the purpose:</b>  Components are pre-formed pieces that are included in other applications and are not supposed to operate 'on their own'. Components help to build system from smaller separate pieces (components) into one system. A service is a self-contained program that can function on its own and can be integrated into more complex systems. The service allows different software to exchange data over the internet. The software that requests data is called a service requester, whereas the software that processes the request and provides the data is called a service provider.<br />
+		<b>By separation of functionality:</b> Components usually consists of related data and functions. They are more modular and cohesive whereas services can have various functionality and provide several different services at the same time.<br /> 
+		<b>By accessibility and interaction with other systems:</b> Components are accessed through “require” and “provide” interfaces, remote procedures or method calls. The web services can be accessed by means of SOAP – “Simple Access Object Protocol”, WSDL – “Web Service Description Language”, UDDI – “Universal Description, Discovery, and Integration” or REST - “Representation State Transfer Architecture with GET, POST, PUT, DELETE Requests.” <br />  
+		<b>By implementation and deployment:</b> Components can be implemented from the scratch or reused from any standard libraries such as .NET framework, JDBC, Java Swing Library etc. The components are usually integrated into one system through the interconnection between “require” and “provide” interfaces. As for software services they can be developed from the scratch or built based on the composition of other components. The Service provider publishes the Web Service at a discovery agency. The potential service requestor searches for a service at the discovery agency, acquires the URL of the required service, gets the WSDL file, builds the client and uses the provided service. <br/> 
+		<b>By the availability of standards:</b> Components don’t usually follow any specific public standards. The services follow the predefined standards such as standard access protocol SOAP, standard methods of service description WSDL and subscription UDDI. All these standards provide consistent and compatible communication between different systems across the network.<br/>  
+		<b>By reusability:</b> Components acting as basic blocks are used for integration of basic functionality whereas services being distributed over the network and having more powerful features can provide more functionality and extensibility after they are integrated into one system. Service-oriented applications can integrate separate business process and have more extensive functionality than component-oriented systems.<br/>  
+		<b>By methods of testing:</b> Since most components are built locally they don’t have to be tested over the network. Standard white, black-box testing techniques can be used to test the components. As for services they have to be tested over the network and include performance, load, stress, usability, accessibility and security testing.<br/><br/>  
+
+		<span style="font-style: italic; font-size: 18px;">The major consequences of the listed above differences are the following:</span> 
+		<ul style="font-size: 17px; text-align: justify; list-style-image: url('blog/square.jpg');">
+			<li>The component-oriented systems can have less functional requirements, less maintenance than service-oriented systems</li>  
+			<li>Since services can provide more functionality and can scale across the network (internet) the service-oriented systems can be more scalable than component-oriented systems.</li>
+		</ul>
+		</p>
+		
+	</div>
+	</div>
+   </div>
+
+
+<br />
+<footer>
+<br />
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-md-6 col-sm-12">
+				<div class="copyright">
+					<p>
+						<br />
+						<span style="font-size: 17px;">&copy; <script>document.write(new Date().getFullYear());</script> Andrey Vasilyev</span>
+					</p>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-6 col-sm-12">
+				<div class="social-network">
+					<span>Follow me:&nbsp;</span>
+					<a href="#" class="iconMedia icon-cube facebook" target="blank"></a>
+					<a href="https://github.com/andrey12v/githubprojects" class="iconMedia icon-cube github" target="blank"></a>
+					<a href="https://www.linkedin.com/in/andrey-vasilyev-08316b62/" class="iconMedia icon-cube linkedin" target="blank"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+<br />
+</footer>
+
+<script src="js/viewportchecker.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	jQuery('.post').addClass("hiddenBlog").viewportChecker({
+	    classToAdd: 'visibleBlog animated zoomIn', // Class to add to the elements when they are visible
+	    offset: 10    
+	   });   
+});            
+</script>
+ 
+ </body>
+</body>
+</html>

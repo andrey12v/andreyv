@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en" height="100%">
+<head>
+  <title>ANDREY VASILYEV</title>
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="googlebot" content="noindex">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="images/icon-logo.png">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+  <link href="css/main_style.css" rel="stylesheet">
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+<script>
+
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 50) {
+    $('nav').addClass('shrink');
+  } else {
+    $('nav').removeClass('shrink');
+  }
+});
+
+</script>
+
+<style>
+
+
+</style>
+  
+</head>
+<body>
+<!-- ***************** Begin Navigation Bar ********************-->
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <img id="logo" src="images/big-logo.jpg">
+	</div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li><a href="projects.html"><span class="glyphicon glyphicon-cog"></span> My projects</a></li>
+        <li><a href="blog.html"><span class="glyphicon glyphicon-comment"></span> Blog</a></li>
+		<li><a href="#contact"><span class="glyphicon glyphicon-send"></span> Contact</a></li>
+		<!--<li><a href="#"><span class="glyphicon glyphicon-search"><span id="searchMenu"></span></a></li>-->
+	    		
+	  </ul>
+    </div><!--/.nav-collapse -->
+ </div>
+</nav>
+
+<!-- ***************** End Navigation Bar ********************-->
+
+<!-- ***************** Begin Main Carousel ********************-->
+  <br>
+  <!--data-pause="false"-->
+  <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="8500" data-pause="false">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+	  <li data-target="#myCarousel" data-slide-to="4"></li>
+	  <li data-target="#myCarousel" data-slide-to="5"></li>
+	  <li data-target="#myCarousel" data-slide-to="6"></li>
+	</ol>
+	
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active">
+        <img src="images/slide1.jpg" alt="">
+        <div class="carousel-caption">
+          <h1 data-animation="animated bounceInLeft">SOFTWARE DEVELOPMENT</h1>
+          <p data-animation="animated bounceInRight">Software Development is one of my technical skills that I learned at school and then improved it on work related projects.</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="images/slide2.jpg" alt="">
+        <div class="carousel-caption">
+          <h1 data-animation="animated bounceInLeft">WEB DEVELOPMENT</h1>
+          <p data-animation="animated bounceInRight">I have worked with web technologies and implemented various web applications that can be viewed in my project section</p>
+		</div>
+      </div>
+    
+      <div class="item">
+        <img src="images/slide3.jpg" alt="">
+        <div class="carousel-caption">
+          <h1 data-animation="animated bounceInLeft">MOBILE DEVELOPMENT</h1>
+          <p data-animation="animated bounceInRight">Mobile Development is one of the technological fields that I have always been interested in. I implemented iOS Xamarin Apps that can be downloaded from Apple Store.</p>
+		</div>
+      </div>
+
+	  <div class="item">
+        <img src="images/slide4.jpg" alt="">
+        <div class="carousel-caption">
+          <h1 data-animation="animated bounceInLeft">eCOMMERCE</h1>
+          <p data-animation="animated bounceInRight">I implemented multiple eCommerce stores based on Able Commerce, PHP laravel frameworks and integrated them with different payment gateways.</p>
+		</div>
+      </div>
+
+      <div class="item">
+        <img src="images/database.jpg" alt="">
+        <div class="carousel-caption">
+          <h1 data-animation="animated bounceInLeft">DATABASE DEVELOPMENT</h1>
+          <p data-animation="animated bounceInRight">MS SQL and MySql databases have been part of my development projects which I designed and modified</p>
+        </div>
+      </div>
+  
+	<div class="item">
+        <img src="images/slide6.jpg" alt="">
+        <div class="carousel-caption">
+          <h1 data-animation="animated bounceInLeft">ERP/CRM SYSTEMS</h1>
+          <p data-animation="animated bounceInRight">Business applications are the major part of any information system. I worked with JD Edwards Oracle ERP system and Salesforce CRM.</p>
+        </div>
+      </div>
+	
+	 <div class="item">
+        <img src="images/slide7.jpg" alt="">
+        <div class="carousel-caption">
+          <h1 data-animation="animated bounceInLeft">Network Configuration</h1>
+          <p data-animation="animated bounceInRight">Working for different companies I have also been involved in computer network support and configuration.</p>
+        </div>
+      </div>
+  
+		
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+<!-- ***************** End Main Carousel ********************-->
+
+<!-- ***************** Begin About Me Section ********************-->  
+<div class="container" >
+	<div class="animated zoomIn">
+	<br />
+	<h2 id="titleFont"><span  class="line-center" style="background-color: #fff;">About Myself</span></h2>
+	<p class="lead"><img src="images/aboutus.jpg" style="border-radius: 8px; float:left;width:195px;height:173px; padding: 0px 15px 10px 0px; font-size: 11px;">
+		Hello Everyone, I am glad to introduce myself and tell you more about my education, work experience I have.  
+		When I was a graduate student at NDSU I developed this website for demonstration and informative purposes so that everyone could get to know me more and take a look at some of my projects I have done at school and work.<br />
+		As for me, I have always been interested in computer technologies and when I have a chance I improve my knowledge in different areas, from network configuration to software development. 
+		I got my Bachelor’s Degree in Computer Information Systems at Minnesota State University Moorhead in 2009. While I was in college I worked part-time as a Web Developer and then, after I graduated, 
+		I have worked full-time for various companies in Fargo, North Dakota as an IT Specialist, System Analyst and Software Developer. Since I have always aspired to improve my qualification, 
+		I earned Master’s Degree in Software Engineering at North Dakota State University later on.<br /> 
+		Beside school and work, I also take active part in different computer events in Fargo such as hackathons and game development competitions. At hackathons, I proposed such 
+		applications as <a href="/nutrilookup/nutrilookup.html", target="_blank"><b>nutrilookup</b></a> and <a href="/cassCounty.html", target="_blank"><b>censusApp</b></a>. 
+		Beside this, when I was involved in the game development competition in Fargo I implemented <a href="projects.html?modal=modal-mobydick", target="blank"><b>“Moby Dick”</b></a> video game, 
+		based on C# programming language and Unity Visual Studio. <br />
+	</div>
+</div><!-- /.container -->
+<!-- ***************** End About Me Section ********************-->  
+
+<!-- ***************** Begin What I Can Do Section ********************-->  
+<br />
+<div class="container">
+<h2 id="titleFont"><span  class="line-center" style="background-color: #fff;">My skills</span></h2> 
+
+</div>
+<br />
+<br />
+<div class="container">
+<div class="row">
+
+      <div class="col-sm-6 col-md-2 col-lg-2">
+		<div class="box">
+			<h3>Software Development</h3>
+			<span class="glyphicon glyphicon-th-large icon"></span>
+			<a></a>
+		</div>
+	 </div>
+      
+	  
+	  <div class="col-sm-6 col-md-2 col-lg-2">
+	  <div class="box">
+			<h3>Web Development</h3>
+			<span class="glyphicon glyphicon-picture"></span>
+			<a></a>
+		</div>
+	  </div>
+      
+	  
+	  <div class="col-sm-6 col-md-2 col-lg-2">
+	 	<div class="box">
+			<h3>Mobile Development</h3>
+			<span class="glyphicon glyphicon-phone"></span>
+			<a></a>		
+		</div>
+	  </div>
+
+	  
+	  
+     <div class="col-sm-6 col-md-2 col-lg-2">
+		<div class="box">
+			<h3>eCommerce</h3>
+			<br />
+			<span class="glyphicon glyphicon-shopping-cart"></span>
+			<a></a>
+		</div>
+	 </div>
+     
+     <div class="col-sm-6 col-md-2 col-lg-2">
+		<div class="box">
+			<h3>ERP/CRM Implementation</h3>
+			<span class="glyphicon glyphicon-qrcode"></span>
+			<a></a>
+		</div>
+	 </div>
+      
+	  
+	  <div class="col-sm-6 col-md-2 col-lg-2">
+	  <div class="box">
+			<h3>Network Configuration</h3>
+			<span class="glyphicon glyphicon-link"></span>
+		<a></a>
+		</div>
+	  </div>
+</div>
+</div>
+<!-- ***************** End What I Can Do Section ********************-->  
+
+<!-- ***************** Begin Recommendations ********************-->  
+<div class="container">
+<h2 id="titleFont"><span  class="line-center" style="background-color: #fff;">Recommendations</span></h2> 
+
+</div>
+
+<br />
+  <div class="module parallax parallax-1">
+    
+	<div class="container">
+    <div id="miniSlider" class="carousel slide" data-ride="carousel" data-interval="11000">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#miniSlider" data-slide-to="0" class="active"></li>
+      <li data-target="#miniSlider" data-slide-to="1"></li>
+      <li data-target="#miniSlider" data-slide-to="2"></li>
+      <li data-target="#miniSlider" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+		<div class="item">
+			<h3>Minnesota State University Moorhead</h3>
+			<p class="normal">I have known Andrey Vasilyev for two full academic years. I have been both his teacher and academic advisor. Andrey has been one of the hardest working and dedicated students that I have been associated with in my 24 years at NSUM. Not only has he worked for his classes, he has also worked hard to overcome language barriers since he came to the United Sates. He has made himself proficient in the English language.<br />
+			 The entire recommendation can be provided upon request.
+			</p>
+			  <p class="author">Daniel Brekke<br />
+			Professor & Chair, CSIS Department MSUM <br />
+			May 26, 2009
+			</p>
+		</div>
+	  
+		<div class="item">
+			
+		  <h3>North Dakota Trade Office</h3>
+		  <p class="normal">Andrey Vasilyev worked as an intern at North Dakota Trade Office since September 1 2007. He worked as an export assistant, with a focus on computer systems development. He was assigned various tasks including export market research and English/Russian translation. His primary duties included assisting in the on-going development of the North Dakota Trade Office Web site, development of the Trade Office account database and providing daily computer support services for Trade Office staff. </p>
+		  The entire recommendation can be provided upon request.
+		  <p class="author">Jeff Zent<br />
+		  Communication Director<br />
+		  January 12, 2009
+		  </p>
+		</div>
+		
+		
+		<div class="item active">
+          
+		  <h3>Titan Machinery</h3>
+          <p class="normal">Andrey Vasilyev has worked for Titan Machinery since January 2009. He worked in many different areas and projects in IT. At the beginning he was hired at Titan Machinery as an intern on an IT Help Desk position. He fixed computers, provided technical support and consultation for company employees over the phone and in person. During his work experience Andrey demonstrated his professional skills, great attitude towards assigned projects, and quality of work.<br />
+		  The entire recommendation can be provided upon request.
+		  </p>
+		  <p class="author">John Tassava, CIO<br />
+		  Novemmber 7, 2014
+		  </p>
+		 
+	  	</div>
+
+      
+
+      <div class="item">
+		 
+        <h3>Myriad Mobile</h3>
+        <p class="normal">
+			Andrey is an ardent learner and is keen on improving himself through his own experience and by learning from other team members. He always makes sure that any projects and tasks assigned are accurately completed and to the satisfaction of key stakeholders. His communication and transparency with supervisors is very much appreciated. The status and progress of his work was always clear and if ever an unexpected delay was encountered he would make maximum efforts to complete everything in time. <br />
+			The entire recommendation can be provided upon request.
+		</p>
+		<p class="author">Eston Taylor<br />
+		Chief Operating Officer<br />
+		May 1, 2018
+		</p>  
+	
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#miniSlider" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#miniSlider" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+</div>
+<!-- ***************** End Recommendations ********************-->  
+
+
+<!--****************** Begin Modal Window For NDTO ******************-->
+<div id="modal-ndto" class="modal fade">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Online Registration & Reports</h4>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 16px; text-align: justify;">
+			North Dakota Trade Office provides a variety of services for North Dakota companies by assisting them to export their products all over the world. NDTO makes market research, provides consultation on export documentation, organizes business events, trade fairs and foreigh trips. <br />  
+			I worked for the Trade Office as a part-time Web Developer and Export Assistant when I was a student at MSUM from 2007 to 2009. I implemented different functionality for the company website such as Big Iron Registration System, Dynamic Photo Gallery and English/Russian Translation Tool. For more information about the projects I implemented at NDTO please see my project section.
+		</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--****************** End Modal Window For NDTO ******************-->
+
+<!--****************** Begin Modal Window For IMS ******************-->
+<div id="modal-ims" class="modal fade">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">International Marketing Systems</h4>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 16px; text-align: justify;">International Marketing Company is the Fargo based company that sells various products online by utilizing eCommerce websites and their internal software. I worked for this company on their temporary project part-time while I was employed at Titan Machinery full-time .<br /> 
+			I took part in the development of their Inventory Tracking System that they integrated with their eCommerce site. I used C# programming language and MS SQL Server Databases. 
+			</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--****************** End Modal Window For IMS ******************-->
+
+<!--****************** Begin Modal Window For Titan Machinery ******************-->
+<div id="modal-titan" class="modal fade">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Titan Machinery</h4>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 16px; text-align: justify;">Titan Machinery is one of the largest dealerships of Case IH and New Holland equipment in the US. At the time, when I graduated from college in 2009 Titan Machinery had already had about 40 stores and one of the largest dealerships in the Midwest.<br /> 
+			While I was still in college Titan Machinery hired me to work for them as an IT Help Desk. I provided technical support, fixed computer networks, PCs, laptops, printers. Since the company expanded very quickly they also worked on the replacement of their legacy ERP system to a new one which would meet the company needs. So after one year of my employment at Titan Machinery they promoted me to a System Analyst job to work on their ERP system “Oracle JD Edwards E1”.  I analyzed business requirements, wrote technical documentation and implemented JDE reports for different parts of company business. 
+		</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--****************** End Modal Window For Titan Machinery ******************-->
+
+
+<!--****************** Begin Modal Window For Swanson ******************-->
+<div id="modal-swanson" class="modal fade">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Swanson Health Products</h4>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 16px; text-align: justify;">
+			Swanson Health Products is one of the largest companies in Fargo that produces and sells healthy vitamins and supplements. <br />
+			I worked part-time for Swanson while I was going to North Dakota State University for my graduate degree. I worked at Swanson as an Account Representative at their International Department. I processed bulk orders from international customers, placed these orders in the company ERP system and prepared shipping documentation.
+		</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--****************** End Modal Window For Swanson ******************-->
+
+<!--****************** Begin Modal Window For Sundog ******************-->
+<div id="modal-sundog" class="modal fade">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Sundog</h4>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 16px; text-align: justify;">
+			Sundog Interactive is a marketing consulting company that provides a wide range of marketing services starting from marketing campaigns, advertisement, market research and promotions to web site development and Salesforce CRM customization. I worked at Sundog Interactive as a Salesffoce Software Engineer. I customize and implement new functionality in the Salesforce System and earned Salesforce Certificate.   
+		</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--****************** End Modal Window For Sundog ******************-->
+
+<!--****************** Begin Modal Window For Myriad Mobile ******************-->
+<div id="modal-myriadmobile" class="modal fade">
+	<div class="modal-dialog">
+  
+	  <!-- Modal content-->
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <button type="button" class="close" data-dismiss="modal">&times;</button>
+		  <h4 class="modal-title">Myriad Mobile</h4>
+		</div>
+		<div class="modal-body">
+		  <p style="font-size: 16px; text-align: justify;">
+			Myriad Mobile provides mobile solutions for small businesses to Fortune 500 Companies. Specialties include mobile app development, consulting, and integration, providing start to finish solutions for companies looking to go mobile.
+			I worked for Myriad Mobile as a Web Engineer. I took part in the development of their corporate software “Bushel” designed for farmers, agricultural companies and elevators.  
+		  </p>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		</div>
+	  </div>
+  
+	</div>
+  </div>
+  <!--****************** End Modal Window For Sundog ******************-->
+
+  <!--****************** Begin Modal Window For My Global Data ******************-->
+<div id="modal-myglobaldata" class="modal fade">
+	<div class="modal-dialog">
+  
+	  <!-- Modal content-->
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <button type="button" class="close" data-dismiss="modal">&times;</button>
+		  <h4 class="modal-title">My Global Data</h4>
+		</div>
+		<div class="modal-body">
+		  <p style="font-size: 16px; text-align: justify;">
+			My Global Data is Minnesota based IT company. It offers all inclusive tech and creative solutions such as web hosting, custom software, and web development, computer network support and configuration.     
+		  </p>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		</div>
+	  </div>
+  
+	</div>
+  </div>
+  <!--****************** End Modal Window For Sundog ******************-->
+
+
+<!-- ***************** Begin Completed Projects ********************-->  
+<div class="greyBackground">
+<br/>
+<div class="container">
+<h2 id="titleFont"><span  class="line-center" style="background-color: #eaeaea;">I worked for</span></h2> 
+</div>
+<br />
+<div class="container" style="text-align: center;">
+      <!-- ***************** Begin Portfolio Slider ***************** -->
+	  <div id="portfolioSlider1" class="carousel slide" data-ride="carousel" data-interval="false">
+		<div class="carousel-inner" role="listbox">
+		 
+		 <div class="item  active">
+                
+				
+			<div class="col-xs-6 col-md-3">
+				<!-- ***** Begin overlay and thumbnail image display for NDTO ***** -->
+				<div class="templatemo-project-box">
+				<div class="thumbnail" href="#"><img alt="" src="images/NDTO.png"></div>
+					<div class="project-overlay">
+						<h5>NDTO</h5>
+						<hr />
+						<button type="button" data-toggle="modal" data-target="#modal-ndto">
+                                View Details
+                        </button>
+					</div>
+				</div>
+			    <!-- ***** End overlay and thumbnail image display for Rosrezerv ***** --> 
+			</div>          
+             
+
+			<div class="col-xs-6 col-md-3">
+                
+				<!-- ***** Begin overlay and thumbnail image display for IMS ***** -->
+				<div class="templatemo-project-box">
+				<div class="thumbnail" href="#"><img alt="" src="images/IMS.png"></div>
+					<div class="project-overlay">
+						<h5>IMS</h5>
+						<hr />
+						<button type="button" data-toggle="modal" data-target="#modal-ims">
+                                View Details
+                        </button>
+					</div>
+				</div>
+			    <!-- ***** End overlay and thumbnail image display for IMS ***** --> 
+              
+			  </div>  
+			  <div class="col-xs-6 col-md-3">
+              
+                <!-- ***** Begin overlay and thumbnail image display for Titan ***** -->
+			    <div class="templatemo-project-box">
+				<div class="thumbnail" href="#"><img alt="" src="images/Titan.jpg"></div>
+					<div class="project-overlay">
+						<h5>Titan Machinery</h5>
+						<hr />
+						<button type="button" data-toggle="modal" data-target="#modal-titan">
+                                View Details
+                        </button>
+					</div>
+				</div>
+			    <!-- ***** End overlay and thumbnail image display for Titan ***** -->
+            </div>
+			
+			<div class="col-xs-6 col-md-3">
+              
+                <!-- ***** Begin overlay and thumbnail image display for Swanson ***** -->
+				<div class="templatemo-project-box">
+				<div class="thumbnail" href="#"><img alt="" src="images/swanson.jpg"></div>
+					<div class="project-overlay">
+						<h5>Swanson</h5>
+						<hr />
+						<button type="button" data-toggle="modal" data-target="#modal-swanson">
+                                View Details
+                        </button>
+					</div>
+				</div>
+			    <!-- ***** End overlay and thumbnail image display for Swanson ***** -->
+			</div>
+		  
+		  </div>
+		 
+		  <div class="item">
+    		<div class="col-xs-6 col-md-3">
+					<!-- ***** Begin overlay and thumbnail image display for Sundog ***** -->
+					<div class="templatemo-project-box">
+					<div class="thumbnail" href="#"><img alt="" src="images/sundog.jpg"></div>
+						<div class="project-overlay">
+							<h5>Sundog</h5>
+							<hr />
+							<button type="button" data-toggle="modal" data-target="#modal-sundog">
+									View Details
+							</button>
+						</div>
+					</div>
+					<!-- ***** End overlay and thumbnail image display for Sundog ***** -->
+			</div>
+
+			<div class="col-xs-6 col-md-3">
+				<!-- ***** Begin overlay and thumbnail image display for Myriad Mobile ***** -->
+				<div class="templatemo-project-box">
+				<div class="thumbnail" href="#"><img alt="" src="images/MyriadMobile.jpg"></div>
+					<div class="project-overlay">
+						<h5>Myriad Mobile</h5>
+						<hr />
+						<button type="button" data-toggle="modal" data-target="#modal-myriadmobile">
+								View Details
+						</button>
+					</div>
+				</div>
+				<!-- ***** End overlay and thumbnail image display for Myriad Mobile ***** -->
+			</div>
+
+			<div class="col-xs-6 col-md-3">
+				<!-- ***** Begin overlay and thumbnail image display for My Global Data ***** -->
+				<div class="templatemo-project-box">
+				<div class="thumbnail" href="#"><img alt="" src="images/MyGlobalData.png"></div>
+					<div class="project-overlay">
+						<h5>My Global Data</h5>
+						<hr />
+						<button type="button" data-toggle="modal" data-target="#modal-myglobaldata">
+								View Details
+						</button>
+					</div>
+				</div>
+				<!-- ***** End overlay and thumbnail image display for My Global Data ***** -->
+			</div>
+
+         </div>
+       </div>
+	
+			<ul class="pager">
+				<li><a data-slide="prev" href="#portfolioSlider1" class=""><i class="glyphicon glyphicon-chevron-left"></i></a></li>
+				<li><a data-slide="next" href="#portfolioSlider1" class=""><i class="glyphicon glyphicon-chevron-right"></i></a></li>
+			</ul>	
+	
+	</div>
+<br />
+</div>
+</div> 	<!-- *************** End Grey Background *************** -->
+<!-- ***************** End Completed Projects ********************-->  
+
+
+<!-- ***************** Begin Blog Articles ********************-->  
+<br />
+<div class="container">
+<h2 id="titleFont"><span  class="line-center" style="background-color: #fff;">Blog Articles</span></h2> 
+<br />
+<div class="col-sm-6 col-md-6">
+	<ul class="list-inline">
+		<li class="col-md-4">
+			<a href="#">
+				<img class="img-responsive" src="blog/components.jpg" />
+			</a>
+		</li>
+		<li  class="col-md-8">
+			<div class="pull-left">
+				<span style="font-weight: 700;">Differences between software components and services. The important consequences of these differences</span><br/>
+			</div>
+			<br />
+			<p>
+				Components are pre-formed pieces that are included in other applications and are not supposed to operate 'on their own'.<a class="smallBlogLink" href="blog1.html">[...]</a>
+			</p>
+		</li>
+	</ul>
+</div>
+
+<div class="col-sm-6 col-md-6">
+	<ul class="list-inline">
+		<li class="col-md-4">
+			<a href="#">
+				<img class="img-responsive" src="blog/requirements.jpg"/>
+			</a>
+		</li>
+		<li  class="col-md-8">
+			<div class="pull-left">
+				<span style="font-weight: 700;">How can the functional requirements be affected by each non-functional requirement?  Why would this documentation be useful?</span><br/>
+			</div>
+			<br />
+			<p>
+				Non-functional requirement can have very significant impact on functional requirements and, as a result of this, can lead to changes in <a class="smallBlogLink" href="blog2.html">[...]</a>
+			</p>
+		</li>
+	</ul>
+</div>
+
+<div class="col-sm-6 col-md-6">
+	<ul class="list-inline">
+		<li class="col-md-4">
+			<a href="#">
+				<img class="img-responsive" src="blog/uml.jpg" />
+			</a>
+		</li>
+		<li  class="col-md-8">
+			<div class="pull-left">
+				<span style="font-weight: 700;">Why should conceptual modeling have multiple models, expressing a different viewpoint of the system?</span><br/>
+			</div>
+			<br />
+			<p>
+				It is well known that conceptual model is just abstract view of the future system and cannot describe all aspects of the system implementation.  <a class="smallBlogLink" href="blog3.html">[...]</a>
+			</p>
+		</li>
+	</ul>
+</div>
+
+<div class="col-sm-6 col-md-6">
+	<ul class="list-inline">
+		<li class="col-md-4">
+			<a href="#">
+				<img class="img-responsive" src="blog/reliability.jpg"/>
+			</a>
+		</li>
+		<li  class="col-md-8">
+			<div class="pull-left">
+				<span style="font-weight: 700;">How is reliability different from safety?  How are they similar?</span><br/>
+			</div>
+			<br />
+			<p>
+				According to the definition of reliability and safety, the reliability is concerned with delivering services correctly over a given period of time, in specified conditions as expected by a user. <a class="smallBlogLink" href="blog4.html">[...]</a>
+			</p>
+		</li>
+	</ul>
+</div>
+</div>
+<!-- ***************** End Blog Articles ********************-->  
+
+<br />
+<br />
+
+<div style="background-color: #f8f8f8;">  <!-- Colors: f8f9fb f3f6fb f5f8ff  f3f6fd fafbff f1f5ff-->
+<div id="contact" class="container" >
+<h2 id="titleFont"><span class="line-center" style="background-color: #f8f8f8;">Contact me</span></h2> 
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<form action="" method="post" role="form">
+			<div class="form-group">
+				<?php echo $result; ?>    
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-group">
+						<label>Name</label>
+					<input class="form-control" name="name" id="name" placeholder="" type="text" required>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label>Email</label>
+						<input class="form-control" name="email" id="email" placeholder="" type="email" required>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label>Subject</label>
+						<input class="form-control" name="subject" id="subject" required>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label>Message</label>
+				<textarea class="form-control" name="message" id="message" placeholder="" rows="8" required></textarea>
+			</div>
+			<span>
+			<button id="contactBtn" class="btn btn-primary" type="submit">Send Message</button> 
+			</span>
+			<br />
+			
+		</form>
+	</div> <!-- Col end -->
+</div>
+<br />
+</div>
+
+<footer>
+<br />
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-6 col-sm-12">
+					<div class="copyright">
+						<p>
+							<br />
+							<span style="font-size: 17px;">&copy; <script>document.write(new Date().getFullYear());</script> Andrey Vasilyev</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-sm-12">
+					<div class="social-network">
+						<span>Follow me:&nbsp;</span>
+						<a href="#" class="iconMedia icon-cube facebook" target="blank"></a>
+						<a href="https://github.com/andrey12v/githubprojects" class="iconMedia icon-cube github" target="blank"></a>
+						<a href="https://www.linkedin.com/in/andrey-vasilyev-08316b62/" class="iconMedia icon-cube linkedin" target="blank"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+<br />
+</footer>
+
+<script src="js/jquery-bootstrap-modal-steps.min.js"></script>
+<script>
+
+(function( $ ) {
+	//Function to animate slider captions 
+	function doAnimations( elems ) {
+		//Cache the animationend event in a variable
+		var animEndEv = 'webkitAnimationEnd animationend';
+		
+		elems.each(function () {
+			var $this = $(this),
+				$animationType = $this.data('animation');
+			$this.addClass($animationType).one(animEndEv, function () {
+				$this.removeClass($animationType);
+			});
+		});
+	}
+	//Variables on page load 
+		var $myCarousel = $('#myCarousel'),
+		$firstAnimatingElems = $myCarousel.find('.item:first').find("[data-animation ^= 'animated']");
+		
+	//Initialize carousel 
+	$myCarousel.carousel();
+	
+	//Animate captions in first slide on page load 
+	doAnimations($firstAnimatingElems);
+	
+	//Pause carousel  
+	$myCarousel.carousel('pause');
+	
+	
+	//Other slides to be animated on carousel slide event 
+	$myCarousel.on('slide.bs.carousel', function (e) {
+		var $animatingElems = $(e.relatedTarget).find("[data-animation ^= 'animated']");
+		doAnimations($animatingElems);
+	});  
+	
+})(jQuery);
+
+$(".box").hover(
+	function () {
+		$(this).find('h3').addClass("animated fadeInDown");
+		$(this).find('span').addClass("animated zoomIn");
+		$(this).find('p').addClass("animated fadeInUp");
+	},
+	function () {
+		$(this).find('h3').removeClass("animated fadeInDown");
+		$(this).find('span').removeClass("animated zoomIn");
+		$(this).find('p').removeClass("animated fadeInUp");
+	}
+);
+
+$("span").hover(
+	function () {
+		$(this).find('#contactBtn').addClass("animated fadeIn");
+	},
+	function () {
+		$(this).find('#contactBtn').removeClass("animated fadeIn");
+	}
+);
+
+$('#modal-sample-1').modalSteps();
+
+</script>
+
+<script src="js/ScrollToTop.js" type="text/javascript"></script>
+ 
+ </body>
+</html>

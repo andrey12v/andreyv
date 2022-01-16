@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" height="100%">
+<head>
+  <title>Andrey Vasilyev</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="images/icon-logo.png">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+  <link href="css/main_style.css" rel="stylesheet">
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  
+<script>
+$(window).ready(function(){
+	$("#searchMenu").text($(window).width());
+	/*if($(window).width()<750)
+	{
+		$("#searchMenu").text(" Search"); 
+		$("#searchMenu").css({"font-size": "19px"});
+		
+	}
+	else
+	{
+		$("#searchMenu").text(""); 
+		$("#searchMenu").css({"font-size": "0px"});
+	}*/
+
+});
+
+$(window).resize(function(){
+	$("#searchMenu").text($(window).width());
+	/*if($(window).width()<750)
+	{
+		$("#searchMenu").text(" Search"); 
+		$("#searchMenu").css({"font-size": "19px"});
+	}
+	else
+	{
+		$("#searchMenu").text(""); 
+		$("#searchMenu").css({"font-size": "0px"});
+	}*/
+});
+
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 50) {
+    $('nav').addClass('shrink');
+  } else {
+    $('nav').removeClass('shrink');
+ }
+});
+
+</script>
+
+<style>
+html, body
+{
+	background-color: #e5e5e5;
+}
+
+</style>
+  
+</head>
+<body>
+<!-- ***************** Begin Navigation Bar ********************-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <img id="logo" src="images/small-logo2.jpg">
+	</div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+       	<li><a href="projects.html"><span class="glyphicon glyphicon-cog"></span> My Projects</a></li>
+        <li class="active"><a href="blog.html"><span class="glyphicon glyphicon-comment"></span> Blog</a></li>
+		<li><a href="index.html#contact"><span class="glyphicon glyphicon-send"></span> Contact</a></li>
+		<!--<li><a href="search.php"><span class="glyphicon glyphicon-search"><span id="searchMenu"></span></a></li>-->
+	    		
+	  </ul>
+    </div><!--/.nav-collapse -->
+</div>
+</nav>
+<!-- ***************** End Navigation Bar ********************-->
+<br />
+
+<div id="blogHeader" class="header">
+<br />
+<br />
+<p class="header1">BLOG
+</p>
+</div>
+<br />
+<br />
+<div class="container">
+   <div class="row">
+      <div class="col-sm-6 col-md-6 col-lg-6">
+		<div class="boxBlog post">
+			<img class="img-responsive" src="blog/components.jpg">
+			<h3>Differences between software components and services. The important consequences of these differences</h3>
+			<p>
+			Components are pre-formed pieces that are included in other applications and are not supposed to operate 'on their own'. Components help to build system from smaller separate pieces (components) into one system. A service is a self-contained program that can function on its own and can be integrated into more complex systems. The service allows different software to exchange data over the internet. The software that requests data is called a service requester 
+			</p>
+			<a href="blog1.html">Read More</a>
+		</div>
+	 </div>
+	 
+	 <div class="col-sm-6 col-md-6 col-lg-6">
+		<div class="boxBlog post">
+			<img class="img-responsive" src="blog/requirements.jpg">
+			<h3>How can the functional requirements be affected by each non-functional requirement?  Why would this documentation be useful?</h3>
+			<p>
+			Non-functional requirement can have very significant impact on functional requirements and, as a result of this, can lead to changes in other documents such as requirements, architecture, detail design, technical specifications and legal regulations. The impact of non-functional on functional requirements could change the design of the system on different levels from the architectural view to its implementation. That’s why, it is very important to provide clear documentation of functional requirements being affected by <br/> 
+			</p>
+			<a href="blog2.html">Read More</a>
+		</div>
+	 </div>
+	 
+	 <div class="col-sm-6 col-md-6 col-lg-6">
+		<div class="boxBlog post">
+			<img class="img-responsive" src="blog/uml.jpg">
+			<h3>Why should conceptual modeling have multiple models, each expressing a different viewpoint of the overall system?</h3>
+			<p>
+			It is well known that conceptual model is just abstract view of the future system and cannot describe all aspects of the system implementation. Most systems consist of subsystems, components, packages and classes. Subsystems and components might have different 
+			</p>
+			<a href="blog3.html">Read More</a>
+		</div>
+	 </div>
+	 
+	 <div class="col-sm-6 col-md-6 col-lg-6">
+		<div class="boxBlog post">
+			<img class="img-responsive" src="blog/reliability.jpg">
+			<h3>How is reliability different from safety?  How are they similar?</h3>
+			<p>
+			According to the definition of reliability and safety, the reliability is concerned with delivering services correctly over a given period of time, in specified conditions as expected by a user. However, safety is more concerned with system behavior in case of its failure, how likely it is that they system will cause damage to people or its environment. So even reliable system can be unsafe.  
+			</p>
+			<a href="blog4.html">Read More</a>
+		</div>
+	 </div>
+	 
+	<div class="col-sm-6 col-md-6 col-lg-6">
+		<div class="boxBlog post">
+			<img class="img-responsive" src="blog/codereuse.jpg">
+			<h3>How does reusing code save money, risk, and time?</h3>
+			<p>
+			Reusable code reduces cost by shortening development cycles. By taking advantage of previously created code, developers can save themselves from recreating a code from scratch. So redundancies across the organization decrease developers’ time and company’s money. •	By taking advantage of a proven marketable code, a developer is taking advantage of a tangible market differentiator.   
+			</p>
+			<a href="blog5.html">Read More</a>
+		</div>
+	 </div>
+	 
+	 <div class="col-sm-6 col-md-6 col-lg-6">
+		<div class="boxBlog post">
+			<img class="img-responsive" src="blog/wsn.jpg">
+			<h3>Challenges of wireless sensor networks and their resolutions.</h3>
+			<p>
+			Ad hoc deployment: Most sensor nodes are deployed in regions which have no infrastructure at all. A typical way of deployment in a forest would be tossing the sensor nodes from an plane. In such a situation, it is up to the nodes to identify its connectivity and distribution. Unattended operation: In most cases, once deployed, sensor networks have no human intervention. 
+			</p>
+			<a href="#">Read More</a>
+		</div>
+	 </div>
+ 
+ 
+ 
+ 
+   </div>
+</div>
+
+
+<br />
+<br />
+	
+<br />
+<br />
+<br />
+<br />
+<footer>
+<br />
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-8">
+					<div class="copyright">
+						<p>Contact info:&nbsp;&nbsp;<a href="mailto:webmaster@example.com" style="underline: none; color: #155a9f;">andrey12v@gmail.com</a><p>
+						<p>
+							<span>&copy; 2015 Designed & developed by Andrey Vasilyev
+						</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+				<span class="social-network">
+					 <div class="component">
+						<span>Follow us:&nbsp;</span>
+						<a href="#" class="iconMedia icon-cube facebook">facebook</a>
+						<a href="#" class="iconMedia icon-cube twitter">twitter</a>
+						<a href="#" class="iconMedia icon-cube googleplus">google+</a>
+					</div>
+				</span>
+				</div>
+			</div>
+		</div>
+<br />
+</footer>
+
+<script src="js/viewportchecker.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	jQuery('.post').addClass("hiddenBlog").viewportChecker({
+	    classToAdd: 'visibleBlog animated zoomIn', // Class to add to the elements when they are visible
+	    offset: 10    
+	   });   
+});            
+</script>
+
+
+</body>
+</html>

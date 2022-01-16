@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" height="100%">
+<head>
+  <title>Nutri Look Up</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="images/nutri-icon.png">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/nutrilookup_style.css" rel="stylesheet">
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  
+</head>
+<body>
+<br><br>
+
+    <!--****************** Begin Modal Window For Weight Management ******************-->
+	<div id="modal-weight" class="modal fade">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Weight management, age: 18-49</h4>
+				</div>
+				<div class="modal-body">
+					<b>Nutrition Facts:</b><br>
+					<img src="images/yes.png" height="20" width="20">&nbsp;&nbsp;More Fiber (no limits)<br>
+					<img src="images/no.png" height="20" width="20">&nbsp;&nbsp;No Cholesterol (0)<br>
+					<img src="images/warning.png" height="20" width="20">&nbsp;&nbsp;Low Fat (no more than 5)<br>
+					<img src="images/no.png" height="20" width="20">&nbsp;&nbsp;No Saturated Fat (0)<br>
+					<img src="images/warning.png" height="20" width="20">&nbsp;&nbsp;Low Sugar (no more than 5)<br>
+					<img src="images/warning.png" height="20" width="20">&nbsp;&nbsp;Low Sodium (no more than 250)<br>
+					<img src="images/yes.png" height="20" width="20">&nbsp;&nbsp;More Protein (no limits)
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--****************** End Modal Window For Weight Management ******************-->
+
+	<!--****************** Begin Modal Window For Digestive Health ******************-->
+	<div id="modal-digestion" class="modal fade">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Digestion Health, age: 18-49</h4>
+				</div>
+				<div class="modal-body">
+					<b>Nutrition Facts:</b><br>
+					<img src="images/yes.png" height="20" width="20">&nbsp;&nbsp;More Fiber (no limits)<br>
+					<img src="images/no.png" height="20" width="20">&nbsp;&nbsp;No Sugar (0)<br>
+					<img src="images/no.png" height="20" width="20">&nbsp;&nbsp;No Artificial Sweeteners (0)<br>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--****************** End Modal Window For Digestive Health ******************-->
+	
+        
+        <!--****************** Begin Modal Window For Anemia ******************-->
+	<div id="modal-anemia" class="modal fade">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Anemia, age: 18-49</h4>
+				</div>
+				<div class="modal-body">
+					<b>Nutrition Facts:</b><br>
+					<img src="images/warning.png" height="20" width="20">&nbsp;&nbsp;Food should contain iron at least 50<br>
+					<img src="images/yes.png" height="20" width="20">&nbsp;&nbsp;Vitamin C is preferable<br>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--****************** End Modal Window For Anemia ******************-->
+        
+        
+    <!--****************** Begin Modal Window For Osteoporosis ******************-->
+	<div id="modal-osteoporosis" class="modal fade">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Osteoporosis, age: 18-49</h4>
+				</div>
+				<div class="modal-body">
+					<b>Nutrition Facts:</b><br>
+					<img src="images/yes.png" height="20" width="20">&nbsp;&nbsp;As more calcium as better<br>
+					<img src="images/warning.png" height="20" width="20">&nbsp;&nbsp;Low Sodium (No more than 150)<br>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--****************** End Modal Window For Osteoporosis ******************-->
+        
+    <div class="container">
+		
+	<br>
+	<div style="text-align: right; width: 100%; opacity: 1.0;">
+		<img id="logo" src="images/nutri-logo.png">
+	</div>
+	
+	<div class="form-group">
+		<label>LOOK UP Food Item:</label>
+		<input class="form-control" name="name" id="foodName" placeholder="" type="text" onkeypress="getKeyboardCode(event)" />
+		<p id="foodError" style="color:red; font-size: 15px;"></p>
+	</div>
+
+	
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-group">
+				<div class="border-style">
+					<label>Calories</label>
+					<div class="row">
+						<div class="col-md-6 col-xs-6">
+							<input class="form-control" name="name" id="minCalories" placeholder="Min" type="text" onkeypress="getKeyboardCode(event)" >
+						</div>
+						<div class="col-md-6 col-xs-6">
+							<input class="form-control" name="name" id="maxCalories" placeholder="Max" type="text" onkeypress="getKeyboardCode(event)" >
+						</div>
+					</div>
+				</div>
+			<p id="CaloriesError" style="color:red; font-size: 15px;"></p>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group">
+				<div class="border-style">	
+					<label>Fat</label>
+					<div class="row">
+						<div class="col-md-6 col-xs-6">
+							<input class="form-control" name="name" id="minFat" placeholder="Min" type="text" onkeypress="getKeyboardCode(event)">
+						</div>
+						<div class="col-md-6 col-xs-6">
+							<input class="form-control" name="name" id="maxFat" placeholder="Max" type="text" onkeypress="getKeyboardCode(event)">
+						</div>
+					</div>
+				</div>
+				<p id="FatError" style="color:red; font-size: 15px;"></p>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group">
+				<div class="border-style">	
+					<label>Saturated Fat</label>
+					<div class="row">
+						<div class="col-md-6 col-xs-6">
+							<input class="form-control" name="name" id="minSatFat" placeholder="Min" type="text" onkeypress="getKeyboardCode(event)">
+						</div>
+						<div class="col-md-6 col-xs-6">
+							<input class="form-control" name="name" id="maxSatFat" placeholder="Max" type="text" onkeypress="getKeyboardCode(event)">
+						</div>
+					</div>
+				</div>
+				<p id="SatFatError" style="color:red; font-size: 15px;"></p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-group">
+				<div class="border-style">	
+					<label>Sodium</label>
+					<div class="row">
+						<div class="col-md-6 col-xs-6">
+							<input class="form-control" name="name" id="minSodium" placeholder="Min" type="text" onkeypress="getKeyboardCode(event)">
+						</div>
+						<div class="col-md-6 col-xs-6">
+							<input class="form-control" name="name" id="maxSodium" placeholder="Max" type="text" onkeypress="getKeyboardCode(event)">
+						</div>
+					</div>
+				</div>
+				<p id="SodiumError" style="color:red; font-size: 15px;"></p>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group">
+				<div class="border-style">
+					<label>Fiber</label>
+					<div class="row">
+						<div class="col-md-6 col-xs-6">
+							<input class="form-control" name="name" id="minFiber" placeholder="Min" type="text" onkeypress="getKeyboardCode(event)">
+						</div>
+						<div class="col-md-6 col-xs-6">
+							<input class="form-control" name="name" id="maxFiber" placeholder="Max" type="text" onkeypress="getKeyboardCode(event)">
+						</div>
+					</div>
+				</div>
+				<p id="FiberError" style="color:red; font-size: 15px;"></p>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group">
+				<div class="border-style">
+					<label>Sugar</label>
+					<div class="row">
+						<div class="col-md-6 col-xs-6">
+							<input class="form-control" name="name" id="minSugar" placeholder="Min" type="text" onkeypress="getKeyboardCode(event)">
+						</div>
+						<div class="col-md-6 col-xs-6">
+							<input class="form-control" name="name" id="maxSugar" placeholder="Max" type="text" onkeypress="getKeyboardCode(event)">
+						</div>
+					</div>
+				</div>
+				<p id="SugarError" style="color:red; font-size: 15px;"></p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-group">
+				<div class="border-style">	
+					<label>Protein</label>
+					<div class="row">
+						<div class="col-md-6 col-xs-6">
+							<input class="form-control" name="name" id="minProtein" placeholder="Min" type="text" onkeypress="getKeyboardCode(event)">
+						</div>
+						<div class="col-md-6 col-xs-6">
+							<input class="form-control" name="name" id="maxProtein" placeholder="Max" type="text" onkeypress="getKeyboardCode(event)">
+						</div>
+					</div>
+				</div>
+				<p id="ProteinError" style="color:red; font-size: 15px;"></p>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group">
+				<div class="border-style">
+					<label>Cholesterol</label>
+					<div class="row">
+						<div class="col-md-6 col-xs-6">
+							<input class="form-control" name="name" id="minCholesterol" placeholder="Min" type="text" onkeypress="getKeyboardCode(event)">
+						</div>
+						<div class="col-md-6 col-xs-6">
+							<input class="form-control" name="name" id="maxCholesterol" placeholder="Max" type="text" onkeypress="getKeyboardCode(event)">
+						</div>
+					</div>
+				</div>
+				<p id="CholesterolError" style="color:red; font-size: 15px;"></p>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group">
+				<div class="border-style">
+					<label>Iron</label>
+					<div class="row">
+						<div class="col-md-6 col-xs-6">
+							<input class="form-control" name="name" id="minIron" placeholder="Min" type="text" onkeypress="getKeyboardCode(event)">
+						</div>
+						<div class="col-md-6 col-xs-6">
+							<input class="form-control" name="name" id="maxIron" placeholder="Max" type="text" onkeypress="getKeyboardCode(event)">
+						</div>
+					</div>
+				</div>
+				<p id="IronError" style="color:red; font-size: 15px;"></p>
+			</div>
+		</div>
+	</div>
+   
+    
+	<div style="text-align: center; font-size: 20px; weight-style: bold; font-weight: 600;">Health Disorders:</div><br>
+	<div class="form-group">
+		<div class="row" style="font-size: 18px;">
+			<div class="col-md-3">
+				<input type="checkbox" id="chbWeight" onclick="chbWeightOnClick()"/> 
+				<button type="button" data-toggle="modal" data-target="#modal-weight" class="btn btn-link" style="font-size: 18px;">Weight Management </button>
+			</div>	
+			<div class="col-md-3">
+				<input type="checkbox" id="chbDigestion" onclick="chbDigestionOnClick()"/>
+				<button type="button" data-toggle="modal" data-target="#modal-digestion" class="btn btn-link" style="font-size: 18px;">Digestive Health</button>
+			</div>
+			<div class="col-md-3">
+				<input type="checkbox" id="chbAnemia" onclick="chbAnemiaOnClick()"/> 
+				<button type="button" data-toggle="modal" data-target="#modal-anemia" class="btn btn-link" style="font-size: 18px;">Anemia</button>
+			</div>
+            <div class="col-md-3">
+				<input type="checkbox" id="chbOsteoporosis" onclick="chbOsteoporosisOnClick()"/> 
+				<button type="button" data-toggle="modal" data-target="#modal-osteoporosis" class="btn btn-link" style="font-size: 18px;">Osteoporosis</button>
+			</div>
+  		</div>
+	</div>
+
+	<br>
+        <!--btn btn-primary -->
+	<div style="text-align: center;"><button id="lookupBtn" type="submit" onclick="advancedQuery()">LOOK UP Food</button></div> 
+	<br>
+ </div>
+<br>
+<div class="container">
+<div style="font-size: 20px; font-weight: 600; text-align: center;">LOOK UP Results:</div>
+<div style="text-align:center;"><img src="images/btnPrior.png" class="hvr-grow" onclick="getPriorPage()"/>
+<span style="margin:90px;"></span><img src="images/btnNext.png" class="hvr-grow" onclick="getNextPage()"/></div>
+
+<br>
+<div id="lookupResult"></div>
+</div>
+
+ <script src="js/search.min.js" type="text/javascript"></script> 
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://arrow.scrolltotop.com/arrow26.js"></script>
+ 
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>Toggleable Search Form - Template Monster Demo</title>
+  <link rel="shortcut icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+  <link rel="icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+
+<body>
+  <nav id="topbar">
+    <ul class="navigation">
+      <li class="threebar"><a href="#"><i class="fa fa-bars"></i></a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Stuffington</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    
+    <div class="searchlink" id="searchlink">
+      <i class="fa fa-search"></i>
+
+      <div class="searchform">
+        <form id="search">
+          <input type="text" class="s" id="s" placeholder="keywords...">
+          <button type="submit" class="sbtn"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+<script type="text/javascript">
+$(function() {
+  var $searchlink = $('#searchlink');
+  
+  // hover effect
+  /*$searchlink.on('mouseover', function(){
+    alert($(this).attr('id'));
+	$(this).addClass('open');
+  }).on('mouseout', function(){
+    $(this).removeClass('open');
+  });*/
+  
+  $searchlink.on('click', function(e){
+    //var target = e ? e.target : window.event.srcElement;
+    /*if($(target).attr('id') == 'searchlink') {
+      if($(this).hasClass('open')) {
+        $(this).removeClass('open');
+      } else {
+        $(this).addClass('open');
+      }
+	}*/
+	
+	if($(this).attr('id') == 'searchlink') {
+      if(($(this).hasClass('open')) == false) {
+        $(this).addClass('open');
+      }
+	  else if(($(this).hasClass('open')) == true) {
+        $(this).removeClass('open');
+      }
+	}
+	
+	/*if($(this).attr('id') == 'searchlink') {
+      if(!$(this).hasClass('open')) {
+        $(this).addClass('open');
+      } 
+	}*/
+	
+	
+	
+	
+  });
+  
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" height="100%">
+<head>
+  <title>Andrey Vasilyev</title>
+  <meta name="robots" content="noindex,nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="images/icon-logo.png">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+  <link href="css/main_style.css" rel="stylesheet">
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  
+<script>
+$(window).ready(function(){
+	$("#searchMenu").text($(window).width());
+	/*if($(window).width()<750)
+	{
+		$("#searchMenu").text(" Search"); 
+		$("#searchMenu").css({"font-size": "19px"});
+		
+	}
+	else
+	{
+		$("#searchMenu").text(""); 
+		$("#searchMenu").css({"font-size": "0px"});
+	}*/
+
+});
+
+$(window).resize(function(){
+	$("#searchMenu").text($(window).width());
+	/*if($(window).width()<750)
+	{
+		$("#searchMenu").text(" Search"); 
+		$("#searchMenu").css({"font-size": "19px"});
+	}
+	else
+	{
+		$("#searchMenu").text(""); 
+		$("#searchMenu").css({"font-size": "0px"});
+	}*/
+});
+
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 50) {
+    $('nav').addClass('shrink');
+  } else {
+    $('nav').removeClass('shrink');
+ }
+});
+
+</script>
+
+<style>
+html, body
+{
+	background-color: #e5e5e5;
+}
+
+</style>
+  
+</head>
+<body>
+<!-- ***************** Begin Navigation Bar ********************-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <img id="logo" src="images/big-logo.jpg">
+	</div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+       	<li><a href="projects.html"><span class="glyphicon glyphicon-cog"></span> My Projects</a></li>
+        <li class="active"><a href="blog.html"><span class="glyphicon glyphicon-comment"></span> Blog</a></li>
+		<li><a href="index.html#contact"><span class="glyphicon glyphicon-send"></span> Contact</a></li>
+		<!--<li><a href="search.php"><span class="glyphicon glyphicon-search"><span id="searchMenu"></span></a></li>-->
+	    		
+	  </ul>
+    </div><!--/.nav-collapse -->
+</div>
+</nav>
+<!-- ***************** End Navigation Bar ********************-->
+<br />
+
+<div id="blogHeader" class="header">
+<br />
+<br />
+<p class="header1">BLOG
+</p>
+</div>
+<br />
+<br />
+<div class="container">
+  
+	
+	<div class="animated flip"> 
+	<div class="blogText">
+		<img class="img-responsive" src="blog/uml.jpg" style="float: left; margin:10px;">
+		
+		<p style="font-family: ProfsetITFont; font-size: 30px; text-align: center;">Why should conceptual modeling have multiple models, each expressing a different viewpoint of the overall system?</p>
+		<p class="lead" style="font-size: 17px; ">
+			The conceptual model is an abstract view of the future system and cannot describe all aspects of the system implementation. Most systems consist of subsystems, components, packages and classes. Subsystems and components might have different relationships (aggregation, serialization, multiplicity etc.) and can be distributed differently across networks (local, wide etc.). The run time processes might interact differently during the execution of the application. All these aspects of the system are very important for consideration and should be described with various models. So the main reasons why the conceptual model should be supported by multiple models are the following:</p>
+		<ul style="font-size: 17px; text-align: justify; list-style-image: url('blog/checkmark7.jpg');">
+			<li>The entire system cannot be expressed through one abstract view only because of its complexity. The system might consist of different subsystems, components and relationships on different levels of design. For example, UML Class Diagram can describe the structure of the system from its higher level representation (from components) to the lower level (individual classes). The Entity-Relationship Model represents database design. The distribution of the system components across the network is shown by means of the network model. The overall functionality of the system and its interaction with different stakeholders could be described by means of use case diagrams and business process models.</li>
+            <li>Multiple models, showing application from different viewpoints (business, architectural, technical), help to understand the system for different stakeholders. Multiple models improve communication between stakeholders and eliminate any ambiguities in requirements. For example, the model showing the functionality of the system on the business level is very helpful for business analysts and customers. The model expressing the technical design of the system is helpful for system analysts and development teams.</li>     
+            <li>Multiple models help to resolve different possible issues of the future system and mitigate risks through prototyping, experimental testing. If the risk is hard to identify with one model then the scope of the area might be narrowed down and represented by means of other models.
+              Multiple models help to view and predict functional and non-functional characteristics of the 
+              system (future performance, availability etc.)
+            </li> 
+            <li>Models expressing the system from different viewpoints help to manage the overall software development process more efficiently and implement set tasks on every stage of the software development cycle more accurately. If initial requirements were vague and didn’t have any visual representation with UML, if database design was not provided with Entity-Relationship diagram, then stakeholders would not have clear documentation for the future system and would have more chances to make mistakes in further stages of system implementation - run out of schedule, miss important requirements.</li>  
+            <li>The multiple models and their patterns could be reused in other software development cycles as example manuals or templates.</li>
+		</ul>
+		
+	</div>
+	</div>
+</div>
+ 
+   
+
+<br />
+<footer>
+<br />
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-md-6 col-sm-12">
+				<div class="copyright">
+					<p>
+						<br />
+						<span style="font-size: 17px;">&copy; <script>document.write(new Date().getFullYear());</script> Andrey Vasilyev</span>
+					</p>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-6 col-sm-12">
+				<div class="social-network">
+					<span>Follow me:&nbsp;</span>
+					<a href="#" class="iconMedia icon-cube facebook" target="blank"></a>
+					<a href="https://github.com/andrey12v/githubprojects" class="iconMedia icon-cube github" target="blank"></a>
+					<a href="https://www.linkedin.com/in/andrey-vasilyev-08316b62/" class="iconMedia icon-cube linkedin" target="blank"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+<br />
+</footer>
+
+<script src="js/viewportchecker.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	jQuery('.post').addClass("hiddenBlog").viewportChecker({
+	    classToAdd: 'visibleBlog animated zoomIn', // Class to add to the elements when they are visible
+	    offset: 10    
+	   });   
+});            
+</script>
+ 
+ </body>
+</body>
+</html>

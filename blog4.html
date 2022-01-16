@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" height="100%">
+<head>
+  <title>Andrey Vasilyev</title>
+  <meta name="robots" content="noindex,nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="images/icon-logo.png">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+  <link href="css/main_style.css" rel="stylesheet">
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  
+<script>
+$(window).ready(function(){
+	$("#searchMenu").text($(window).width());
+	/*if($(window).width()<750)
+	{
+		$("#searchMenu").text(" Search"); 
+		$("#searchMenu").css({"font-size": "19px"});
+		
+	}
+	else
+	{
+		$("#searchMenu").text(""); 
+		$("#searchMenu").css({"font-size": "0px"});
+	}*/
+
+});
+
+$(window).resize(function(){
+	$("#searchMenu").text($(window).width());
+	/*if($(window).width()<750)
+	{
+		$("#searchMenu").text(" Search"); 
+		$("#searchMenu").css({"font-size": "19px"});
+	}
+	else
+	{
+		$("#searchMenu").text(""); 
+		$("#searchMenu").css({"font-size": "0px"});
+	}*/
+});
+
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 50) {
+    $('nav').addClass('shrink');
+  } else {
+    $('nav').removeClass('shrink');
+ }
+});
+
+</script>
+
+<style>
+html, body
+{
+	background-color: #e5e5e5;
+}
+
+</style>
+  
+</head>
+<body>
+<!-- ***************** Begin Navigation Bar ********************-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <img id="logo" src="images/big-logo.jpg">
+	</div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+       	<li><a href="projects.html"><span class="glyphicon glyphicon-cog"></span> My Projects</a></li>
+        <li class="active"><a href="blog.html"><span class="glyphicon glyphicon-comment"></span> Blog</a></li>
+		<li><a href="index.html#contact"><span class="glyphicon glyphicon-send"></span> Contact</a></li>
+		<!--<li><a href="search.php"><span class="glyphicon glyphicon-search"><span id="searchMenu"></span></a></li>-->
+	    		
+	  </ul>
+    </div><!--/.nav-collapse -->
+</div>
+</nav>
+<!-- ***************** End Navigation Bar ********************-->
+<br />
+
+<div id="blogHeader" class="header">
+<br />
+<br />
+<p class="header1">BLOG
+</p>
+</div>
+<br />
+<br />
+<div class="container">
+  
+	
+	<div class="animated slideInUp"> 
+	<div class="blogText">
+		<img class="img-responsive" src="blog/reliability.jpg" style="float: left; margin-right:20px;">
+		
+		<p style="font-family: ProfsetITFont; font-size: 30px; text-align: center;">How is reliability different from safety?  How are they similar?</p>
+		<p class="lead" style="font-size: 17px; ">
+		System reliability and system safety are related but a reliable system can be unsafe and vice versa.
+		So the difference between reliability and safety are the following:</p>
+		<ul style="font-size: 17px; text-align: justify; list-style-image: url('blog/checkmark2.jpg');">
+		<li>According to the definition of reliability and safety, the reliability is concerned with delivering services correctly over a given period of time, in specified conditions as expected by a user. However, safety is more concerned with system behavior in case of its failure, how likely it is that they system will cause damage to people or its environment. So even reliable system can be unsafe. The systems that operate without any crashes might have wrong functionality that could threaten people’s life or environment. The example of such system could be the insulin pump that can be reliable, work without any failures but deliver wrong dose of insulin to a sick person.</li>  
+		<li>Reliability engineering differs from safety engineering with respect to the kind of hazards that they consider. The reliability is concerned with the incidents which could cause loss of certain revenue for the company or the customer. These can be cost due to loss of production, due to system unavailability, unexpected high or low demands for repair costs etc. Safety engineering, on the other hand, is more concerned with hazards that could potentially lead to severe accidents related with the loss of life, or damage of environment.</li>
+		<li>Reliability is different from safety in the way how they are regulated and controlled. Safety engineering is more critical and controlled more strictly than reliability. The safety of the system can be controlled by government and safety organizations (nuclear, aerospace, defense, rail, oil industries etc.)</li>  
+		<li>The reliability and safety might have different requirement specifications, architectural patterns, designs, and implementations. For example, the systems that have higher requirements for safety might have several versions of the same software integrated into one system for the purpose of redundancy and diversity. However, the system, that needs good reliability, doesn’t even need to be overloaded with additional versions of the same software or any redundant implementations. Such redundancy could make the system more expensive and complicated.</li>  
+		<li>The reliability and safety are different in the way how they do risk assessment and determine their upper bounds. Reliability analysis has a broader scope and higher failure rates than safety analysis of a system.</li> 
+		<li>Software engineers can use different approaches to improve reliability and safety. For example, fault tolerance is used for better reliability and damage limitation for safety.</li> 
+		</ul>
+		<p class="lead" style="font-size: 17px; ">
+		The similarities between reliable and safe systems are the following:</p> 
+		<ul style="font-size: 17px; text-align: justify; list-style-image: url('blog/checkmark4.jpg');">
+		<li>Both reliability and safety being part of dependability have the same purpose to deliver trustworthy service to users. The software should be available when required and should operate correctly and without undesirable side effects.</li>
+		<li>The failure of the critical systems will have similar negative consequences with no matter if it happened because of unreliable or unsafe software. Even though the safety is more critical than reliability, the failure of such systems as airplane control or nuclear protection software from low reliability will have the same disastrous effect.</li> 
+		<li>Unreliability or unsafe software affects the same amount of people who use the system in case of failure.</li>
+		<li>Software engineering could use similar techniques to improve software reliability and safety. For example, both reliability and safety will benefit from fault, hazard avoidance, detection and removal.</li>  
+		</ul>
+	</div>
+	</div>
+</div>
+ 
+   
+
+<br />
+<footer>
+<br />
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-md-6 col-sm-12">
+				<div class="copyright">
+					<p>
+						<br />
+						<span style="font-size: 17px;">&copy; <script>document.write(new Date().getFullYear());</script> Andrey Vasilyev</span>
+					</p>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-6 col-sm-12">
+				<div class="social-network">
+					<span>Follow me:&nbsp;</span>
+					<a href="#" class="iconMedia icon-cube facebook" target="blank"></a>
+					<a href="https://github.com/andrey12v/githubprojects" class="iconMedia icon-cube github" target="blank"></a>
+					<a href="https://www.linkedin.com/in/andrey-vasilyev-08316b62/" class="iconMedia icon-cube linkedin" target="blank"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+<br />
+</footer>
+
+<script src="js/viewportchecker.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	jQuery('.post').addClass("hiddenBlog").viewportChecker({
+	    classToAdd: 'visibleBlog animated zoomIn', // Class to add to the elements when they are visible
+	    offset: 10    
+	   });   
+});            
+</script>
+ 
+ </body>
+</body>
+</html>

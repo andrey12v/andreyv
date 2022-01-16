@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" height="100%">
+<head>
+  <title>Andrey Vasilyev</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="images/icon-logo.png">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+  <link href="css/main_style.css" rel="stylesheet">
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/jquery.shuffle.min.js"></script>
+  
+<script>
+	$(document).ready(function() {
+
+			/* initialize shuffle plugin */
+			var $grid = $('#grids');
+
+			$grid.shuffle({
+				itemSelector: '.items' // the selector for the items in the grid
+			});
+
+			/* reshuffle when user clicks a filter item */
+			$('#filter a').click(function (e) {
+				e.preventDefault();
+
+				// set active class
+				$('#filter a').removeClass('active');
+				$(this).addClass('active');
+
+				// get group name from clicked item
+				var groupName = $(this).attr('data-group');
+
+				// reshuffle grid
+				$grid.shuffle('shuffle', groupName );
+			});
+
+		});
+
+
+$(window).ready(function(){
+	$("#searchMenu").text($(window).width());
+	/*if($(window).width()<750)
+	{
+		$("#searchMenu").text(" Search"); 
+		$("#searchMenu").css({"font-size": "19px"});
+		
+	}
+	else
+	{
+		$("#searchMenu").text(""); 
+		$("#searchMenu").css({"font-size": "0px"});
+	}*/
+
+});
+
+$(window).resize(function(){
+	$("#searchMenu").text($(window).width());
+	/*if($(window).width()<750)
+	{
+		$("#searchMenu").text(" Search"); 
+		$("#searchMenu").css({"font-size": "19px"});
+	}
+	else
+	{
+		$("#searchMenu").text(""); 
+		$("#searchMenu").css({"font-size": "0px"});
+	}*/
+});
+
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 50) {
+    $('nav').addClass('shrink');
+  } else {
+    $('nav').removeClass('shrink');
+  }
+});
+
+</script>
+
+<style>
+html, body
+{
+	background-color: f2f1f1;
+	height: 100%;
+}
+
+.container
+{
+	height: 100%;
+}
+
+
+footer
+{
+	position: relative;
+
+}
+
+@media (max-width: 900px){
+	footer
+	{
+		position: relative;
+		top: 1000px;
+	}
+}
+
+</style>
+  
+</head>
+<body>
+<!-- ***************** Begin Navigation Bar ********************-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <img id="logo" src="images/small-logo2.jpg">
+	</div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li class="active"><a href="solutions.html"><span class="glyphicon glyphicon-cog"></span> My Projects</a></li>
+        <li><a href="blog.html"><span class="glyphicon glyphicon-comment"></span> Blog</a></li>
+		<li><a href="index.html#contact"><span class="glyphicon glyphicon-send"></span> Contact</a></li>
+		<li><a href="search.php"><span class="glyphicon glyphicon-search"><span id="searchMenu"></span></a></li>
+	    		
+	  </ul>
+    </div><!--/.nav-collapse -->
+</div>
+</nav>
+<!-- ***************** End Navigation Bar ********************-->
+<br />
+
+<div id="solutionsHeader" class="header">
+<br />
+<br />
+<p class="header1">PROJECTS
+</p>
+</div>
+<br />
+<br />
+<div class="container">
+	<ul id="filter">
+		<li><a class="active" href="#" data-group="all">All</a></li>
+		<li><a href="#" data-group="software">Software</a></li>
+		<li><a href="#" data-group="webApps">Web Apps</a></li>
+		<li><a href="#" data-group="erp">ERP</a></li>
+		<li><a href="#" data-group="letters">Websites</a></li>
+		<li><a href="#" data-group="mobileApps">Mobile Apps</a></li>
+		<li><a href="#" data-group="circle">Databases</a></li>
+	</ul>
+	<br />
+		<div id="grids">
+			<div class="items col-xs-12 col-sm-6 col-md-3"  data-groups='["all", "software"]'>
+				<div class="templatemo-project-box-solutions">
+					<img class="img-responsive center-image" src="images/DynamicPhotoGallery.jpg"/>
+					<div class="project-overlay-solutions">
+						<h5>Dynamic Photogallery</h5>
+						<hr />
+						<button type="button" data-toggle="modal" data-target="#modal-webforum">
+								View Details
+						</button>
+					</div>
+				</div>
+			</div>
+                        <div style="margin: 2px;"></div>
+			<div class="items col-xs-12 col-sm-6 col-md-3" data-groups='["all", "software"]'>
+				<img class="img-responsive center-image" src="images/OnlineRegistration.jpg" />
+			</div>
+            <div style="margin: 2px;"></div>
+			<div class="items col-xs-12 col-sm-6 col-md-3"  data-groups='["all", "software"]'>
+				<img class="img-responsive center-image" src="images/forum.jpg" />
+			</div>
+			<div style="margin: 2px;"></div>
+                        <div class="items col-xs-12 col-sm-6 col-md-3"   data-groups='["all", "webApps"]'>
+				<img class="img-responsive center-image" src="images/nutritionix.jpg" />
+			</div>
+			<div style="margin: 2px;"></div>
+                        <div class="items col-xs-12 col-sm-6 col-md-3"   data-groups='["all", "erp"]'>
+				<img class="img-responsive center-image" src="images/Project1.jpg" />
+			</div>
+		</div>
+</div>
+<br />
+<br />
+<br />
+<footer>
+<br />
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-8">
+					<div class="copyright">
+						<p>Contact info:&nbsp;&nbsp;<a href="mailto:andrey.vasilyev@ndsu.edu" style="underline: none; color: #155a9f;">andrey12v@gmail.com</a><p>
+						<p>
+							<span>&copy; 2015 Designed & developed by Andrey Vasilyev
+						</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+				<span class="social-network">
+					 <div class="component">
+						<span>Follow us:&nbsp;</span>
+						<a href="#" class="iconMedia icon-cube facebook">facebook</a>
+						<a href="#" class="iconMedia icon-cube twitter">twitter</a>
+						<a href="#" class="iconMedia icon-cube googleplus">google+</a>
+					</div>
+				</span>
+				</div>
+			</div>
+		</div>
+<br />
+</footer>
+
+<script>
+$(".box").hover(
+	function () {
+		$(this).find('h3').addClass("animated fadeInDown");
+		$(this).find('span').addClass("animated zoomIn");
+		$(this).find('p').addClass("animated fadeInUp");
+	},
+	function () {
+		$(this).find('h3').removeClass("animated fadeInDown");
+		$(this).find('span').removeClass("animated zoomIn");
+		$(this).find('p').removeClass("animated fadeInUp");
+	}
+);
+
+</script>
+
+</body>
+</html>

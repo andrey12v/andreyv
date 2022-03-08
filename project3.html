@@ -12,47 +12,7 @@
   <script src="js/jquery.min.js" type="text/javascript"></script>
   <script src="js/bootstrap.min.js" type="text/javascript"></script>
   <script src="js/jquery.shuffle.min.js"></script>
-  
-<script>
-$(window).ready(function(){
-	$("#searchMenu").text($(window).width());
-	/*if($(window).width()<750)
-	{
-		$("#searchMenu").text(" Search"); 
-		$("#searchMenu").css({"font-size": "19px"});
-		
-	}
-	else
-	{
-		$("#searchMenu").text(""); 
-		$("#searchMenu").css({"font-size": "0px"});
-	}*/
-
-});
-
-$(window).resize(function(){
-	$("#searchMenu").text($(window).width());
-	/*if($(window).width()<750)
-	{
-		$("#searchMenu").text(" Search"); 
-		$("#searchMenu").css({"font-size": "19px"});
-	}
-	else
-	{
-		$("#searchMenu").text(""); 
-		$("#searchMenu").css({"font-size": "0px"});
-	}*/
-});
-
-$(window).scroll(function() {
-  if ($(document).scrollTop() > 50) {
-    $('nav').addClass('shrink');
-  } else {
-    $('nav').removeClass('shrink');
-  }
-});
-
-</script>
+  <script src="js/custom.js" type="text/javascript"></script>
 
 <style>
 html, body

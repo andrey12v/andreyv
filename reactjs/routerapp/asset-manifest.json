@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/reactjs/routerapp/static/css/main.3cf160c0.chunk.css",
+    "main.js": "/reactjs/routerapp/static/js/main.3908eafc.chunk.js",
+    "main.js.map": "/reactjs/routerapp/static/js/main.3908eafc.chunk.js.map",
+    "runtime-main.js": "/reactjs/routerapp/static/js/runtime-main.218e0138.js",
+    "runtime-main.js.map": "/reactjs/routerapp/static/js/runtime-main.218e0138.js.map",
+    "static/js/2.af0206b5.chunk.js": "/reactjs/routerapp/static/js/2.af0206b5.chunk.js",
+    "static/js/2.af0206b5.chunk.js.map": "/reactjs/routerapp/static/js/2.af0206b5.chunk.js.map",
+    "index.html": "/reactjs/routerapp/index.html",
+    "static/css/main.3cf160c0.chunk.css.map": "/reactjs/routerapp/static/css/main.3cf160c0.chunk.css.map",
+    "static/js/2.af0206b5.chunk.js.LICENSE.txt": "/reactjs/routerapp/static/js/2.af0206b5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.218e0138.js",
+    "static/js/2.af0206b5.chunk.js",
+    "static/css/main.3cf160c0.chunk.css",
+    "static/js/main.3908eafc.chunk.js"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/reactjs/coursegoal/static/css/main.1fdd9d84.chunk.css",
+    "main.js": "/reactjs/coursegoal/static/js/main.961d542c.chunk.js",
+    "main.js.map": "/reactjs/coursegoal/static/js/main.961d542c.chunk.js.map",
+    "runtime-main.js": "/reactjs/coursegoal/static/js/runtime-main.4c924daf.js",
+    "runtime-main.js.map": "/reactjs/coursegoal/static/js/runtime-main.4c924daf.js.map",
+    "static/js/2.caedb1f2.chunk.js": "/reactjs/coursegoal/static/js/2.caedb1f2.chunk.js",
+    "static/js/2.caedb1f2.chunk.js.map": "/reactjs/coursegoal/static/js/2.caedb1f2.chunk.js.map",
+    "index.html": "/reactjs/coursegoal/index.html",
+    "static/css/main.1fdd9d84.chunk.css.map": "/reactjs/coursegoal/static/css/main.1fdd9d84.chunk.css.map",
+    "static/js/2.caedb1f2.chunk.js.LICENSE.txt": "/reactjs/coursegoal/static/js/2.caedb1f2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4c924daf.js",
+    "static/js/2.caedb1f2.chunk.js",
+    "static/css/main.1fdd9d84.chunk.css",
+    "static/js/main.961d542c.chunk.js"
+  ]
+}

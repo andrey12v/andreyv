@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" height="100%">
+<head>
+  <title>Andrey Vasilyev</title>
+  <meta name="robots" content="noindex,nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="images/icon-logo.png">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+  <link href="css/main_style.css" rel="stylesheet">
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/jquery.shuffle.min.js"></script>
+	<script src="js/custom.js" type="text/javascript"></script>
+
+<style>
+html, body
+{
+	background-color: #e5e5e5;
+}
+
+.projectSection img
+{
+	margin: auto;
+	max-height: 350px;
+}
+
+</style>
+  
+</head>
+<body>
+<!-- ***************** Begin Navigation Bar ********************-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <img id="logo" src="images/big-logo.jpg">
+	</div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li class="active"><a href="projects.html"><span class="glyphicon glyphicon-cog"></span> My Projects</a></li>
+        <li><a href="blog.html"><span class="glyphicon glyphicon-comment"></span> Blog</a></li>
+		<li><a href="index.html#contact"><span class="glyphicon glyphicon-send"></span> Contact</a></li>
+		<!--<li><a href="search.php"><span class="glyphicon glyphicon-search"><span id="searchMenu"></span></a></li>-->
+	  </ul>
+    </div><!--/.nav-collapse -->
+</div>
+</nav>
+<!-- ***************** End Navigation Bar ********************-->
+<br />
+
+<div id="solutionsHeader" class="header">
+<br />
+<br />
+<p class="header1">PROJECTS
+</p>
+</div>
+<br />
+<div class="container">
+ 
+	<div class="animated bounceInUp"> 
+	<div class="blogText">.
+		
+		<p style="font-family: ProfsetITFont; font-size: 30px; text-align: center;">Titan Machinery ERP - JD Edwards Oracle</p>
+		<p class="lead" style="font-size: 17px; ">
+			After I graduated from Minnesota State University Moorhead in 2009 I started working for Titan Machinery as an IT Help Desk and after one year I was promoted to work as a System Analyst on the new ERP Oracle System - JD Edward Enterprise One. The prior ERP system “DIS Keystone” that Titan Machinery used didn’t meet demands of their growing business and the company decided to replace their legacy system with more advanced ERP. The implementation and roll out of the new ERP system consisted of multiple stages:<br />
+			1) Analysis of business processes, identification of problem areas to improve (automate)  and documentation of requirements.<br /> 
+			2) Planning of the system implementation and its design according to the defined requirements<br />
+			3) Development, deployment and configuration of the new ERP system. The company started the transition of their ERP system from its key business areas - accounting, finance, operations, parts and service. When the system was deployed in the main departments it was rolled out to all other parts of the company business.<br />   
+			4) The roll out of the system to all company stores and adjustment (improvement) of the system according to company needs.<br /> 
+			<br />
+			Being involved in the system roll out I also focused on the development of JD Edwards Reports and Applications which consisted of the following steps:<br />   
+			<br />
+			1) Elicitate requirements from stakeholders and analyze JD Edwards System<br />
+			<br />
+			<img class="img-responsive center-block" src="images/jde/JDE.jpg" style="max-height: 500px;">
+			<br />
+			2) Analyze data, identify required tables and created business views<br /> 
+			<br />
+			<img class="img-responsive center-block" src="images/jde/Tables.jpg" style="max-height: 500px;"><br />
+			<img class="img-responsive center-block" src="images/jde/BusinessView.jpg" style="max-height: 500px;"><br />
+			3) Write technical documentation - <a href="images/jde/JDEReportDesignSpec.pdf" target="_blank" style="font-weight: bold">JDE Report Design Specification</a><br />
+			4) develop JD Reports and Application using JDE tools:<br />
+			Object Management Workbench<br /><br /> 
+			<img class="img-responsive center-block" src="images/jde/OMW.jpg" style="max-height: 500px;"><br />
+			Business Functions<br /><br />
+			<img class="img-responsive center-block" src="images/jde/BusinessFunction.jpg" style="max-height: 600px;"><br />	
+			Named Event Rules 
+			<br /><br />
+			<img class="img-responsive center-block" src="images/jde/NamedEventRules.jpg" style="max-height: 500px;"><br />	
+		</p>
+	</div>
+	</div>
+   </div>
+<br />
+<footer>
+<br />
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-md-6 col-sm-12">
+				<div class="copyright">
+					<p>
+						<br />
+						<span style="font-size: 17px;">&copy; <script>document.write(new Date().getFullYear());</script> Andrey Vasilyev</span>
+					</p>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-6 col-sm-12">
+				<div class="social-network">
+					<span>Follow me:&nbsp;</span>
+					<a href="#" class="iconMedia icon-cube facebook" target="blank"></a>
+					<a href="https://github.com/andrey12v/githubprojects" class="iconMedia icon-cube github" target="blank"></a>
+					<a href="https://www.linkedin.com/in/andrey-vasilyev-08316b62/" class="iconMedia icon-cube linkedin" target="blank"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+<br />
+</footer>
+ 
+<script>
+$(".box").hover(
+	function () {
+		$(this).find('h3').addClass("animated fadeInDown");
+		$(this).find('span').addClass("animated zoomIn");
+		$(this).find('p').addClass("animated fadeInUp");
+	},
+	function () {
+		$(this).find('h3').removeClass("animated fadeInDown");
+		$(this).find('span').removeClass("animated zoomIn");
+		$(this).find('p').removeClass("animated fadeInUp");
+	}
+);
+
+</script>
+
+<script src="js/ScrollToTop.js" type="text/javascript"></script>
+ 
+ </body>
+
+</body>
+</html>

@@ -1272,9 +1272,9 @@ footer {
 	padding: 10px;
 	float: none;
 	display: block;
-	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
+	font-size: 17px;
 }
 
 .blogText img

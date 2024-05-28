@@ -1,3 +1,6 @@
+
+
+
 .navbar-default
 {
 	background-color: white;
@@ -396,7 +399,7 @@ h2:after{
     top:50%;
     left:0;
     right:0;
-    border-top:groove 1px #f9f9f9;
+    border-top:groove 2px #f9f9f9;
     z-index:-1;
 }
 /***** End Horizontal Line with text in the middle ******/
@@ -405,6 +408,25 @@ h2:after{
 {
 	text-align: justify;
 }
+
+/*************** Begin about me image *****************/
+.aboutme-img
+{
+	border-radius: 8px; 
+	float:left; 
+	width: 250px; 
+  height: 250px; 
+	background-image: url('../images/aboutus1.jpg'); 
+	background-size: cover; /* Ensures the image covers the entire div */
+	background-position: center;
+	margin: 0px 15px 5px 0px;
+}
+
+.aboutme-img:hover {
+	background-image: url('../images/aboutus2.jpg'); /* Hover background image */
+}
+/*************** End about me image *****************/
+
 
 /****** Begin box style for services we offer *******/
  .box {
@@ -452,6 +474,28 @@ h2:after{
 }
 
 /****** End box style for services we offer *******/
+
+/****** About Us image *******/
+.test-image
+{
+	width:195px;
+	height:173px; 
+	background-image: url('../images/aboutus1.jpg');
+}
+
+.about-us-image
+{
+	border-radius: 8px; 
+	float:left;
+	width:195px;
+	height:173px; 
+	padding: 0px 15px 10px 0px; 
+	font-size: 11px;
+	background-image: url('/images/aboutus1.jpg');
+}
+
+
+/****** About Us image *******/
 
 /****** Begin To show fixed background image in div on scroll ******/
 div.module.parallax {
